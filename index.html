@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repaso Eco Ambiental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="marca">
+      <span class="hoja" aria-hidden="true">❦</span>
+      <div>
+        <h1>Ecología Ambiental y Regional</h1>
+        <p class="sub">Repaso para el parcial</p>
+      </div>
+    </div>
+
+    <div class="controles">
+      <div class="seg" role="tablist" aria-label="Modo">
+        <button class="seg-btn activo" data-modo="quiz" role="tab">Preguntas</button>
+        <button class="seg-btn" data-modo="flash" role="tab">Flashcards</button>
+      </div>
+      <select id="filtro-tema" aria-label="Filtrar por tema"></select>
+      <button id="btn-mezclar" class="btn ghost" title="Mezclar el orden">⤮ Mezclar</button>
+      <button id="btn-reset" class="btn ghost" title="Borrar el progreso guardado">↺ Reiniciar</button>
+    </div>
+  </header>
+
+  <section class="progreso" aria-live="polite">
+    <div class="barra"><div id="barra-fill"></div></div>
+    <div id="marcador" class="marcador"></div>
+  </section>
+
+  <main id="vista"></main>
+
+  <nav class="pie">
+    <button id="btn-prev" class="btn">← Anterior</button>
+    <div id="puntos" class="puntos"></div>
+    <button id="btn-next" class="btn">Siguiente →</button>
+  </nav>
+
+  <dialog id="modal">
+    <form method="dialog" class="modal-cerrar"><button aria-label="Cerrar">✕</button></form>
+    <div id="modal-cuerpo"></div>
+  </dialog>
+
+  <script src="preguntas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
