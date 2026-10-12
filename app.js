@@ -18,7 +18,7 @@
   const guardado = cargar();
   let resultados = guardado.resultados || {};   // id -> "ok" | "bad"
   let flashEstado = guardado.flashEstado || {}; // id -> "sabia" | "repasar"
-  let modo = guardado.modo || "quiz";
+  let modo = window.Estudio?.pedidoPorHash() ? "estudio" : guardado.modo || "estudio";
   let tema = guardado.tema || "todos";
   let orden = [];
   let pos = 0;
@@ -83,8 +83,14 @@
   // ───── Render principal ─────
   function render() {
     document.querySelectorAll(".seg-btn").forEach((b) => b.classList.toggle("activo", b.dataset.modo === modo));
+    document.body.classList.toggle("modo-estudio", modo === "estudio");
     const vista = $("#vista");
     vista.innerHTML = "";
+
+    if (modo === "estudio") {
+      window.Estudio.render(vista, { practicar, ampliar });
+      return;
+    }
 
     if (!orden.length) {
       vista.append(el("div", { class: "card vacio" },
@@ -130,6 +136,25 @@
     });
     $("#btn-prev").disabled = pos <= 0;
     $("#btn-next").disabled = pos >= n - 1;
+  }
+
+  // ───── Puentes con la sección Estudiar ─────
+  function practicar(t) {
+    modo = "quiz";
+    tema = t;
+    $("#filtro-tema").value = t;
+    guardar(); reordenar(); render();
+    window.scrollTo({ top: 0 });
+  }
+
+  function ampliar(src, pie) {
+    const cuerpo = $("#modal-cuerpo");
+    cuerpo.innerHTML = "";
+    cuerpo.append(el("figure", { class: "modal-fig" },
+      el("img", { src, alt: "" }),
+      pie ? el("figcaption", { html: pie }) : null));
+    $("#modal").classList.add("lightbox");
+    $("#modal").showModal();
   }
 
   // ───── Modo preguntas ─────
@@ -285,6 +310,7 @@
   function abrirModal(p) {
     const cuerpo = $("#modal-cuerpo");
     cuerpo.innerHTML = "";
+    $("#modal").classList.remove("lightbox");
     cuerpo.append(
       el("h2", {}, "Respuesta correcta"),
       el("div", { class: "respuesta-correcta" }, respuestaTexto(p)),
@@ -332,7 +358,7 @@
   $("#modal").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 
   document.addEventListener("keydown", (e) => {
-    if ($("#modal").open) return;
+    if ($("#modal").open || modo === "estudio") return;
     const enCampo = ["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName);
     if (enCampo) return;
     if (e.key === "ArrowRight") $("#btn-next").click();

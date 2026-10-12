@@ -4,6 +4,7 @@
 
 window.TEMAS = {
   escalas: "Escalas y macrosistemas",
+  productividad: "Productividad primaria",
   clima: "Clima y vegetación",
   sig: "SIG",
   teledeteccion: "Teledetección",
