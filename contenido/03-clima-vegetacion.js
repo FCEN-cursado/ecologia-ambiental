@@ -45,15 +45,15 @@
           <li><b>Forma de la precipitación:</b> nieve si la T está cerca o por debajo de 0 °C.</li>
           <li><b>Vegetación esperada:</b> se integra todo lo anterior y se lo vincula con un bioma (Whittaker, Holdridge).</li>
         </ol>
-        <div class="parcial"><b>Parcial 2022: unir climogramas con localidades</b>
-          <p>El parcial pedía unir tres climogramas con <b>San Rafael</b> (Mendoza), <b>General Pico</b> (La Pampa) y <b>Dolores</b> (Buenos Aires), que forman un transecto oeste-este a ≈ 35-36° S, y justificar el bioma esperado. El razonamiento:</p>
+        <div class="ejemplo"><b>Ejercicio: unir climogramas con localidades</b>
+          <p>Un ejercicio típico es unir tres climogramas con <b>San Rafael</b> (Mendoza), <b>General Pico</b> (La Pampa) y <b>Dolores</b> (Buenos Aires), que forman un transecto oeste-este a ≈ 35-36° S, y justificar el bioma esperado. El razonamiento:</p>
           <ul>
             <li>Como en el centro de Argentina la humedad viene del Atlántico, la <b>P aumenta hacia el este</b> y la <b>amplitud térmica disminuye</b> cerca del mar.</li>
             <li><b>San Rafael:</b> el climograma más seco, con ≈ 300-400 mm, lluvias de verano y casi todo el año con T por encima de P. Corresponde a un <b>desierto o arbustal templado</b>, el Monte con jarillas.</li>
             <li><b>General Pico:</b> intermedio, con ≈ 700-800 mm, lluvias concentradas en primavera-verano y un déficit corto. Corresponde a la transición entre pastizal y bosque abierto (Espinal o caldenal, y pampa semiárida).</li>
             <li><b>Dolores:</b> el más húmedo, con ≈ 900-1.000 mm repartidos todo el año y baja amplitud. Corresponde a un <b>pastizal templado o pradera</b>, la Pampa húmeda.</li>
           </ul>
-          <p>Los valores son aproximados: en el parcial hay que leerlos del gráfico. Lo importante es justificar con la P anual, su distribución, el período seco y la amplitud térmica.</p>
+          <p>Los valores son aproximados: en el ejercicio hay que leerlos del gráfico. Lo importante es justificar con la P anual, su distribución, el período seco y la amplitud térmica.</p>
         </div>`,
     },
     {

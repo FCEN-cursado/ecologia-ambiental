@@ -34,7 +34,7 @@
           <li><b>Escala cartográfica:</b> la escala de representación del mapa, es decir, la relación entre una distancia en el mapa y la distancia real (por ejemplo, 1:250.000).</li>
         </ul>
         <div class="ojo"><b>Ojo con “gran escala”.</b>
-          <p>En cartografía, una <em>escala grande</em> (1:5.000) muestra un área <em>chica</em> con mucho detalle, y una <em>escala chica</em> (1:1.000.000) muestra un área grande con poco detalle. Muchos ecólogos usan “gran escala” en el sentido contrario, como “gran extensión”. En el parcial conviene aclarar: “escala regional (gran extensión, grano grueso)”.</p>
+          <p>En cartografía, una <em>escala grande</em> (1:5.000) muestra un área <em>chica</em> con mucho detalle, y una <em>escala chica</em> (1:1.000.000) muestra un área grande con poco detalle. Muchos ecólogos usan “gran escala” en el sentido contrario, como “gran extensión”. Para evitar confusiones conviene aclarar: “escala regional (gran extensión, grano grueso)”.</p>
         </div>
         <h4>El mismo proceso, distintos controles</h4>
         <p>Un mismo proceso puede generar patrones diferentes a distintas escalas, porque a cada escala lo regulan mecanismos distintos (guía del TP 3):</p>
@@ -43,7 +43,7 @@
           <tr><td>Mineralización del mantillo</td><td>m²: tipo de dosel y microclima</td><td>km²: variaciones climáticas regionales (T y humedad)</td></tr>
           <tr><td>Evapotranspiración</td><td>cm²: presión de vapor y apertura de estomas</td><td>km²: radiación solar</td></tr>
         </table></div>
-        <p>Por eso una conclusión obtenida a una escala <b>no se puede extrapolar automáticamente</b> a otra. Cueto (2006) lo ilustra con la selección de hábitat en aves: el ave puede responder a la estructura de la vegetación en un parche (escala fina), pero a la cobertura de bosque en el paisaje (escala gruesa).</p>
+        <p>Por eso una conclusión obtenida a una escala <b>no se puede extrapolar automáticamente</b> a otra. Cueto (2006) lo ilustra con la selección de hábitat en aves: según la cobertura de bosque en el paisaje (escala gruesa) puede estar o no presente, pero dentro del bosque puede responder a la estructura de la vegetación en un parche (escala fina), </p>
         <figure class="fig"><img src="img/slides/mac_escalas.jpg" alt="Escalas espaciales a las que operan distintos procesos" loading="lazy"><figcaption>Escala cartográfica y escala operativa: sitio → paisaje → ecorregión → regional → subcontinental → continental → global. (Clase 1)</figcaption></figure>`,
     },
     {
@@ -59,7 +59,7 @@
           <tr><td>Deforestación</td><td>Días a años (es rápida)</td></tr>
           <tr><td>Reforestación o recuperación</td><td>Décadas (es lenta: la pérdida es mucho más rápida que la recuperación)</td></tr>
         </table></div>
-        <div class="parcial"><b>Pregunta del Parcial 2022</b>
+        <div class="ejemplo"><b>Ejercicio: escalas de distintos procesos</b>
           <p>“¿Qué es la escala y cómo se caracteriza? ¿A qué escalas temporal y espacial estudiaría los siguientes procesos?” Una respuesta modelo:</p>
           <div class="tabla-wrap"><table class="tabla">
             <tr><th>Proceso</th><th>Temporal</th><th>Espacial</th></tr>
@@ -142,7 +142,7 @@
       r: `<p>Es la dimensión espacial o temporal de un objeto o proceso. Se caracteriza por el <b>grano</b> (la resolución: el tamaño de la unidad mínima de muestreo o del píxel) y la <b>extensión</b> (el área o el período total). Hay que distinguir la escala del fenómeno, la de análisis y la cartográfica.</p>`,
     },
     {
-      p: "¿Cuáles son los cuatro tipos de interacciones en macroecosistemas? Explique cada una, elija una y describa un ejemplo. (Parcial 2022)",
+      p: "¿Cuáles son los cuatro tipos de interacciones en macroecosistemas? Explique cada una, elija una y describa un ejemplo.",
       r: `<p>(1) <b>Teleconexiones:</b> conectan regiones distantes por el flujo de organismos, materia, energía o información. (2) <b>Retroalimentaciones:</b> un componente amplifica (+) o atenúa (−) el efecto de otro. (3) <b>Interacciones entre escalas:</b> procesos a una escala modifican procesos a otra y generan dinámicas no lineales. (4) <b>Patrones emergentes:</b> la acumulación de procesos locales produce un patrón regional.</p>
           <p><i>Ejemplo (teleconexión):</i> la expansión agrícola en el centro de EE. UU. aumentó el alimento invernal de los gansos de las nieves. Sus poblaciones crecieron y degradaron los humedales donde se reproducen, en la bahía de Hudson, a miles de km.</p>`,
     },

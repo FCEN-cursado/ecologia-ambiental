@@ -1,4 +1,4 @@
-// Sección "Estudiar": apuntes completos por unidad.
+// Sección "Apuntes": apuntes completos por unidad.
 // Las unidades se cargan desde contenido/*.js, que hacen window.UNIDADES.push({...}).
 //
 // Esquema de una unidad:
@@ -7,7 +7,7 @@
 //   resumen (HTML: "en pocas palabras"),
 //   secciones: [{ id, titulo, html }],
 //   tp?: { titulo, html },
-//   practica?: [{ p, r (HTML) }]   ← preguntas de guía / parcial con respuesta modelo
+//   practica?: [{ p, r (HTML) }]   ← preguntas de repaso con respuesta modelo
 //   glosario?: [[término, definición]],
 //   biblio?: [texto]
 
@@ -64,7 +64,9 @@ window.Estudio = (() => {
           <p class="nota-indice">Ecorregiones de Argentina no se incluye: por ahora no se evalúa.</p>
         </aside>
         <article class="apunte" id="est-apunte"></article>
+        <aside class="toc toc-lateral" id="est-toc" aria-label="Índice de la unidad"></aside>
       </div>`;
+    fijarAltoCabecera();
 
     $("#est-buscar", cont).addEventListener("input", (e) => {
       busqueda = e.target.value;
@@ -123,6 +125,12 @@ window.Estudio = (() => {
       u.glosario?.length ? ["glosario", "Glosario"] : null,
     ].filter(Boolean);
 
+    const navToc = `
+        <p>Índice unidad ${u.num}</p>
+        <ol>${toc.map(([id, t]) => `<li><a href="#${id}" data-ancla="${id}">${t}</a></li>`).join("")}</ol>`;
+    const lateral = $("#est-toc", cont);
+    lateral.innerHTML = navToc;
+
     ap.innerHTML = `
       <header class="ap-cabecera">
         <p class="ap-num">Unidad ${u.num}</p>
@@ -139,10 +147,7 @@ window.Estudio = (() => {
         ${u.resumen}
       </section>
 
-      <nav class="toc" aria-label="Contenido de la unidad">
-        <p>En esta unidad</p>
-        <ol>${toc.map(([id, t]) => `<li><a href="#${id}" data-ancla="${id}">${t}</a></li>`).join("")}</ol>
-      </nav>
+      <nav class="toc toc-inline" aria-label="Índice de la unidad">${navToc}</nav>
 
       ${u.secciones.map((s) => `
         <section class="ap-seccion" id="${s.id}">
@@ -191,10 +196,11 @@ window.Estudio = (() => {
         </div>
       </footer>`;
 
-    ap.querySelectorAll("[data-ancla]").forEach((a) => a.addEventListener("click", (e) => {
+    [ap, lateral].forEach((raiz) => raiz.querySelectorAll("[data-ancla]").forEach((a) => a.addEventListener("click", (e) => {
       e.preventDefault();
       document.getElementById(a.dataset.ancla)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }));
+    })));
+    seguirSeccion(ap, lateral);
     ap.querySelectorAll("[data-ir]").forEach((b) => b.addEventListener("click", () => irA(cont, b.dataset.ir)));
     ap.querySelectorAll("[data-unidad]").forEach((a) => a.addEventListener("click", (e) => {
       e.preventDefault();
@@ -213,6 +219,31 @@ window.Estudio = (() => {
     });
 
     resaltar(cont);
+  }
+
+  // la cabecera queda fija: su alto define el "top" de los índices y el margen de los anclajes
+  let obsCabecera;
+  function fijarAltoCabecera() {
+    const top = document.querySelector("header.top");
+    if (!top || obsCabecera) return;
+    const fijar = () => document.documentElement.style.setProperty("--alto-top", top.offsetHeight + "px");
+    fijar();
+    obsCabecera = new ResizeObserver(fijar);
+    obsCabecera.observe(top);
+  }
+
+  // marca en el índice lateral la sección que se está leyendo
+  let obsSecciones;
+  function seguirSeccion(ap, lateral) {
+    obsSecciones?.disconnect();
+    const enlaces = Object.fromEntries([...lateral.querySelectorAll("[data-ancla]")].map((a) => [a.dataset.ancla, a]));
+    const visibles = new Set();
+    obsSecciones = new IntersectionObserver((entradas) => {
+      for (const e of entradas) e.isIntersecting ? visibles.add(e.target.id) : visibles.delete(e.target.id);
+      const actual = Object.keys(enlaces).find((id) => visibles.has(id));
+      if (actual) Object.entries(enlaces).forEach(([id, a]) => a.classList.toggle("activo", id === actual));
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    ap.querySelectorAll(".ap-seccion[id]").forEach((sec) => obsSecciones.observe(sec));
   }
 
   // resalta coincidencias de búsqueda dentro del apunte

@@ -190,7 +190,7 @@
             <li>Vincular la vegetación con la <b>dinámica de poblaciones animales</b> (herbívoros, migraciones), porque da información de la oferta de alimento a escalas grandes.</li>
           </ul>
         </div>
-        <div class="parcial"><b>Parcial 2022: NDVI en Sachayoj, Chaco Seco (1985-87 vs. 2021-22)</b>
+        <div class="ejemplo"><b>Ejercicio: NDVI en Sachayoj, Chaco Seco (1985-87 vs. 2021-22)</b>
           <p>En los mosaicos de NDVI se espera ver que el bosque continuo, con NDVI alto (blanco) y textura homogénea, fue reemplazado por <b>parches geométricos</b> (rectángulos) con NDVI bajo o variable: lotes agrícolas o pasturas desmontados, a veces con cortinas de bosque entre ellos. El patrón es de <b>fragmentación</b>: el bosque pasa de ser la matriz a quedar como remanentes. El proceso es el <b>avance de la frontera agropecuaria</b> (desmonte para soja y ganadería) en el Chaco Seco.</p>
         </div>`,
     },
@@ -223,7 +223,7 @@ Map.addLayer(ndvi);</pre>
   },
   practica: [
     {
-      p: "Defina el NDVI. ¿Cómo se calcula? ¿Cuál puede ser su utilidad para los estudios regionales de ecología? (Parcial 2022)",
+      p: "Defina el NDVI. ¿Cómo se calcula? ¿Cuál puede ser su utilidad para los estudios regionales de ecología?",
       r: `<p>Es el Índice de Vegetación de Diferencia Normalizada, un índice espectral que estima la cantidad y el vigor de la vegetación verde. Se calcula como <b>(NIR − Rojo)/(NIR + Rojo)</b> con las reflectividades de cada banda (en Landsat 8: (B5 − B4)/(B5 + B4)). Varía de −1 a 1. Se basa en que la clorofila absorbe el rojo y la estructura celular refleja el NIR.</p>
         <p><b>Utilidad:</b> mapear y monitorear cambios de cobertura (deforestación, expansión agrícola), seguir la fenología y su respuesta al clima, estimar la productividad primaria, detectar sequías, degradación o desertificación y evaluar la recuperación tras disturbios o restauración. Todo a escalas regionales y con series de tiempo largas (Landsat desde 1972).</p>`,
     },

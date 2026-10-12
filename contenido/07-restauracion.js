@@ -187,7 +187,7 @@
   ],
   practica: [
     {
-      p: "Ñacuñán: se propone ampliar la Reserva incorporando campos ganaderos vecinos y restaurar bosques de algarrobo en ellos. ¿Qué aspectos debería incluir el plan? (Parcial 2022)",
+      p: "Ñacuñán: se propone ampliar la Reserva incorporando campos ganaderos vecinos y restaurar bosques de algarrobo en ellos. ¿Qué aspectos debería incluir el plan?",
       r: `<p>Organizarlo con los <b>4 pasos</b>:</p>
         <ol>
           <li><b>Identificar y caracterizar los sitios.</b> Seleccionar y priorizar los campos con criterios físicos, ecológicos, sociales, legales y logísticos (por ejemplo, un SIG multicriterio que priorice cercanía a la reserva como fuente de semillas, menor degradación y acceso). Hacer la <b>línea de base</b>: cobertura y densidad de algarrobos y renovales, otras leñosas y pastos, suelo desnudo, erosión, costras biológicas, carga ganadera, historia de uso (tala, fuego) y actores sociales (puesteros, productores, guardaparques). El <b>ecosistema de referencia</b> es el bosque de algarrobo dentro de Ñacuñán, con cerca de 50 años de exclusión ganadera.</li>

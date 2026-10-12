@@ -160,7 +160,7 @@
   ],
   practica: [
     {
-      p: "¿Cuáles son los principales controles del clima a escala global y local? Explique qué variables afectan y cómo. (Parcial 2022, 2 puntos)",
+      p: "¿Cuáles son los principales controles del clima a escala global y local? Explique qué variables afectan y cómo.",
       r: `<p><b>Escala global:</b></p>
         <ul>
           <li><b>Latitud</b> (el ángulo de incidencia de la radiación). Afecta la temperatura: es mayor en el ecuador y menor en los polos.</li>

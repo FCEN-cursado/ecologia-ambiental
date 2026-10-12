@@ -178,7 +178,7 @@
   },
   practica: [
     {
-      p: "Imagen de Google Earth de Zonda (San Juan): describa la composición y estructura del paisaje e identifique matriz, parches y corredores. ¿Qué procesos abióticos, bióticos y antrópicos explican el patrón del mosaico? (Parcial 2022)",
+      p: "Imagen de Google Earth de Zonda (San Juan): describa la composición y estructura del paisaje e identifique matriz, parches y corredores. ¿Qué procesos abióticos, bióticos y antrópicos explican el patrón del mosaico?",
       r: `<p><b>Composición y estructura:</b> es un valle árido de la Precordillera con un <b>oasis irrigado</b>. Hay un mosaico de fincas (viñedos, olivares) con formas geométricas, un área urbana y, alrededor, sierras con vegetación xerófila rala.</p>
         <ul>
           <li><b>Matriz:</b> depende de la extensión de la imagen. Si domina el entorno desértico, la matriz es el monte o desierto de sierras y pie de monte, y el oasis forma parches. Si la imagen está centrada en el valle cultivado, la matriz es el mosaico agrícola.</li>
