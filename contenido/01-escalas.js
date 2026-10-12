@@ -6,7 +6,7 @@
   bajada: "Por qué la escala a la que miramos cambia lo que vemos, y cómo estudiar la ecología a nivel de regiones y continentes.",
   programa: "a) Macroecología en un contexto regional y global. Escalas de estudio espaciales y temporales. Características e interacciones en macrosistemas: teleconexiones, retroalimentaciones, patrones emergentes.",
   clases: ["1 · Macroecología (J. Aranibar)"],
-  resumen: `
+  resumen: /*html*/ ` 
     <ul>
       <li><b>Escala</b> es la dimensión espacial o temporal de un objeto o proceso. Se describe con el <b>grano</b> (la resolución) y la <b>extensión</b> (el área o período total).</li>
       <li>Cada proceso tiene su <b>escala operativa</b>. El mismo proceso puede estar controlado por mecanismos distintos según la escala a la que se lo mire.</li>
@@ -20,7 +20,7 @@
     {
       id: "esc-que-es",
       titulo: "¿Qué es la escala?",
-      html: `
+      html: /*html*/ `
         <p>En ecología, la <b>escala</b> es la dimensión espacial o temporal de un objeto o de un proceso. No es una propiedad de la naturaleza, sino del <em>observador</em>: depende de cómo diseñamos el estudio. Por eso todo trabajo debería explicitar a qué escala se hizo (Cueto, 2006).</p>
         <p>Se caracteriza por dos componentes:</p>
         <div class="cols">
@@ -39,8 +39,8 @@
         <h4>El mismo proceso, distintos controles</h4>
         <p>Un mismo proceso puede generar patrones diferentes a distintas escalas, porque a cada escala lo regulan mecanismos distintos (guía del TP 3):</p>
         <div class="tabla-wrap"><table class="tabla">
-          <tr><th>Proceso</th><th>Escala fina: lo controla…</th><th>Escala gruesa: lo controla…</th></tr>
-          <tr><td>Mineralización del mantillo</td><td>m²: tipo de dosel y microclima</td><td>km²: variaciones climáticas regionales (T y humedad)</td></tr>
+          <tr><th>Proceso</th><th> Escala fina (area pequeña) </th><th> Escala gruesa (area grande)</th></tr>
+          <tr><td>Mineralización del mantillo</td><td>m²: tipo de <span class="palabra-info" title="La capa superior del bosque formada por las copas de los árboles.">dosel</span> y microclima</td><td>km²: variaciones climáticas regionales (T y humedad)</td></tr>
           <tr><td>Evapotranspiración</td><td>cm²: presión de vapor y apertura de estomas</td><td>km²: radiación solar</td></tr>
         </table></div>
         <p>Por eso una conclusión obtenida a una escala <b>no se puede extrapolar automáticamente</b> a otra. Cueto (2006) lo ilustra con la selección de hábitat en aves: según la cobertura de bosque en el paisaje (escala gruesa) puede estar o no presente, pero dentro del bosque puede responder a la estructura de la vegetación en un parche (escala fina), </p>
@@ -49,7 +49,7 @@
     {
       id: "esc-procesos",
       titulo: "Escalas espaciales y temporales de los procesos",
-      html: `
+      html:  /*html*/`
         <p>Los procesos ecológicos ocupan un “rango” en un diagrama espacio-tiempo: los que abarcan áreas grandes suelen ser también lentos. En clase se preguntó a qué escala temporal ocurren estos procesos:</p>
         <div class="tabla-wrap"><table class="tabla">
           <tr><th>Proceso</th><th>Escala temporal típica</th></tr>
@@ -78,7 +78,7 @@
     {
       id: "esc-macrosistemas",
       titulo: "Macrosistemas: definición y propiedades",
-      html: `
+      html: /*html*/ `
         <div class="idea"><b>Definición (Heffernan et al., 2014)</b>
           <p>Los macrosistemas son sistemas ecológicos jerárquicos que comprenden componentes biológicos, geofísicos y sociales a gran extensión (de <b>cientos a miles de km</b>), que interactúan entre sí y con componentes de escalas más gruesas y más finas.</p>
         </div>
@@ -95,7 +95,7 @@
     {
       id: "esc-interacciones",
       titulo: "Las cuatro interacciones",
-      html: `
+      html: /*html*/ `
         <p>Heffernan et al. (2014) señalan estas interacciones como la fuente más probable de comportamientos <b>inesperados o novedosos</b> en los macrosistemas:</p>
         <div class="tabla-wrap"><table class="tabla">
           <tr><th>Interacción</th><th>Definición</th><th>Ejemplo</th></tr>

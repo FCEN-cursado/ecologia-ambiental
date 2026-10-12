@@ -124,6 +124,169 @@ window.PREGUNTAS = [
     },
   },
 
+  {
+    id: "esc-05",
+    tema: "escalas",
+    tipo: "vf",
+    enunciado:
+      "En cartografía, un mapa a escala 1:1.000.000 es de escala MÁS GRANDE que uno a 1:5.000, porque abarca un área mayor.",
+    opciones: ["Verdadero", "Falso"],
+    correcta: 1,
+    justificacion:
+      "Es falso. La escala cartográfica es una fracción: 1:5.000 es un número mayor que 1:1.000.000, así que es la escala más grande. Una escala grande muestra un área chica con mucho detalle; una escala chica (1:1.000.000) muestra un área grande con poco detalle. Muchos ecólogos usan “gran escala” en el sentido de “gran extensión”, que es justamente lo contrario.",
+    teoria: `
+      <p><strong>Tres tipos de escala</strong> (guía del TP 3):</p>
+      <ul>
+        <li><strong>Escala del patrón o fenómeno:</strong> la escala a la que efectivamente ocurre el proceso en la naturaleza.</li>
+        <li><strong>Escala de análisis u observación:</strong> la eligen los investigadores al fijar el grano (tamaño de la unidad de muestreo) y la extensión (superficie muestreada).</li>
+        <li><strong>Escala cartográfica:</strong> la relación entre una distancia en el mapa y la distancia real (por ejemplo, 1:250.000).</li>
+      </ul>
+      <p><strong>Ojo con “gran escala”:</strong> para evitar confusiones conviene aclarar, por ejemplo, “escala regional (gran extensión, grano grueso)”.</p>
+      <p><strong>El mismo proceso, distintos controles:</strong> la mineralización del mantillo depende del dosel y el microclima a escala de m², pero de las variaciones climáticas regionales a escala de km². Por eso una conclusión obtenida a una escala no se extrapola automáticamente a otra (Cueto, 2006).</p>`,
+    fuente: "1 Macroecología · Guía del TP 3",
+    flash: {
+      frente: "En cartografía, ¿qué muestra una escala grande y qué una escala chica?",
+      dorso: "Una escala grande (1:5.000) muestra un área chica con mucho detalle. Una escala chica (1:1.000.000) muestra un área grande con poco detalle.",
+    },
+  },
+
+  // ───────────── PRODUCTIVIDAD PRIMARIA ─────────────
+  {
+    id: "pro-01",
+    tema: "productividad",
+    tipo: "mc",
+    enunciado:
+      "Un pastizal fija por fotosíntesis 800 g C m⁻² año⁻¹, y las propias plantas respiran 400 g C m⁻² año⁻¹. ¿Cuál es su productividad primaria neta?",
+    opciones: [
+      "400 g C m⁻² año⁻¹",
+      "1.200 g C m⁻² año⁻¹",
+      "800 g C m⁻² año⁻¹",
+      "2 (adimensional)",
+    ],
+    correcta: 0,
+    justificacion:
+      "PPN = PPB − R autótrofa = 800 − 400 = 400 g C m⁻² año⁻¹. Los 800 son la PPB (todo el C fijado); la respiración de las plantas suele ser aproximadamente la mitad de la PPB. La PPN siempre se expresa como masa de C (o materia seca) por superficie y por tiempo, nunca como un cociente sin unidades.",
+    teoria: `
+      <p><strong>PPN = PPB − R<sub>autótrofa</sub></strong></p>
+      <ul>
+        <li><strong>PPB</strong> (productividad primaria bruta, GPP): todo el C fijado por la fotosíntesis.</li>
+        <li><strong>R:</strong> el C que las plantas devuelven a la atmósfera por respiración mitocondrial y fotorrespiración (≈ la mitad de la PPB).</li>
+        <li><strong>Unidades:</strong> masa de C por superficie y por tiempo (g C m⁻² año⁻¹, kg C ha⁻¹ año⁻¹).</li>
+      </ul>
+      <p><strong>Órdenes de magnitud:</strong> selvas tropicales ≈ 1.000-1.200 g C m⁻² año⁻¹, pastizales templados ≈ 300-500 y desiertos &lt; 100.</p>
+      <p>La PPN es la <strong>base energética</strong> del ecosistema: alimenta a herbívoros y descomponedores, define cuánto ganado sostiene un campo y cuánto C se acumula. Desde satélites se estima con el modelo de Monteith: PPN ≈ ε × RFA × fRFA, donde fRFA se estima con el NDVI.</p>`,
+    fuente: "2 Factores de productividad",
+    flash: {
+      frente: "¿Qué diferencia hay entre PPB y PPN, y en qué unidades se expresa la PPN?",
+      dorso: "La PPB es todo el C fijado por fotosíntesis. La PPN es la PPB menos la respiración de las plantas. Se expresa en masa de C por superficie y por tiempo (por ejemplo, g C m⁻² año⁻¹).",
+    },
+  },
+  {
+    id: "pro-02",
+    tema: "productividad",
+    tipo: "unir",
+    enunciado: "Uní cada factor con la forma en que responde la fotosíntesis de una hoja.",
+    pares: [
+      { izq: "Temperatura", der: "Curva en campana: sube hasta un óptimo y luego cae bruscamente" },
+      { izq: "Irradiancia (luz)", der: "Aumenta hasta saturarse; con exceso puede haber fotooxidación" },
+      { izq: "Déficit de presión de vapor", der: "Disminuye porque la planta cierra los estomas" },
+      { izq: "Nitrógeno foliar", der: "Relación lineal con el contenido de Rubisco" },
+    ],
+    justificacion:
+      "La temperatura acelera las enzimas hasta que se desnaturalizan, y además sube la respiración: por eso hay un óptimo. La luz aumenta la fotosíntesis hasta que el límite pasa a ser la fijación de C. Con aire seco (DPV alto) la planta cierra los estomas para no perder agua y entra menos CO₂. El N limita la cantidad de Rubisco, la proteína más abundante de la hoja.",
+    teoria: `
+      <p>Lo que limita la fotosíntesis en una hoja también limita la PPN del ecosistema, si se suma en el espacio y en el tiempo.</p>
+      <ul>
+        <li><strong>Temperatura:</strong> óptimo; por encima aumentan la respiración y la fotorrespiración.</li>
+        <li><strong>Luz:</strong> por debajo del punto de compensación, la respiración supera a la fotosíntesis.</li>
+        <li><strong>Agua (DPV):</strong> compromiso agua-carbono a través de los estomas.</li>
+        <li><strong>CO₂:</strong> es el sustrato de la Rubisco; aumenta hasta saturarse.</li>
+        <li><strong>N:</strong> más N foliar → más Rubisco → más capacidad fotosintética.</li>
+      </ul>
+      <p>A escala de ecosistema, la PPN depende de cuánto tiempo del año coinciden la temperatura adecuada y el agua disponible (la estación de crecimiento), de la superficie foliar y de los nutrientes. Las torres de flujo (Aranibar et al., 2006) muestran cómo el agua y el carbono están acoplados.</p>`,
+    fuente: "2 Factores de productividad",
+    flash: {
+      frente: "¿Qué 5 factores limitan la fotosíntesis a escala de hoja?",
+      dorso: "Luz (satura), temperatura (tiene un óptimo), agua (el cierre estomático por DPV alto reduce la entrada de CO₂), CO₂ (satura) y N (limita la cantidad de Rubisco).",
+    },
+  },
+  {
+    id: "pro-03",
+    tema: "productividad",
+    tipo: "mc",
+    enunciado: "¿Por qué los grandes desiertos del planeta (Sahara, Atacama, Kalahari, Australia) se ubican alrededor de los 30° de latitud?",
+    opciones: [
+      "Porque allí desciende el aire seco de la celda de Hadley, se calienta por compresión y forma un cinturón de alta presión que inhibe las lluvias",
+      "Porque allí asciende el aire cálido y se forma un cinturón de baja presión",
+      "Porque a 30° la radiación solar es mínima durante todo el año",
+      "Porque allí se ubica la Zona de Convergencia Intertropical",
+    ],
+    correcta: 0,
+    justificacion:
+      "En el ecuador el aire caliente y húmedo asciende, se enfría y descarga la lluvia (selvas). Ya seco, se desplaza en altura y desciende a ≈ 30°: al bajar se comprime y se calienta, y la subsidencia genera altas presiones que impiden la formación de nubes. La ZCIT y los ascensos están en el ecuador (y a 60°), no a 30°.",
+    teoria: `
+      <p><strong>Modelo de tres celdas por hemisferio:</strong></p>
+      <ul>
+        <li><strong>Hadley (0-30°):</strong> ascenso en el ecuador (baja presión, lluvias, selvas) y descenso a 30° (alta presión, desiertos). El aire vuelve al ecuador como vientos alisios.</li>
+        <li><strong>Ferrel (30-60°):</strong> vientos del oeste en superficie; a 60° el aire asciende en el frente polar (lluvias frontales).</li>
+        <li><strong>Polar (60-90°):</strong> el aire frío desciende en los polos (desiertos fríos).</li>
+      </ul>
+      <p><strong>ZCIT:</strong> franja de bajas presiones donde convergen los alisios. Migra hacia el hemisferio que está en verano, y por eso muchas regiones tropicales tienen una estación lluviosa y otra seca.</p>
+      <p><strong>Otros controles de la precipitación:</strong> orografía, corrientes marinas (una corriente fría como la de Humboldt genera aridez costera) y ENSO.</p>`,
+    fuente: "2 Factores de productividad (controles del clima)",
+    flash: {
+      frente: "Circulación general: ¿dónde asciende y dónde desciende el aire, y qué clima genera cada uno?",
+      dorso: "Asciende en el ecuador y a 60° (bajas presiones, lluvias). Desciende a 30° y en los polos (altas presiones, subsidencia, desiertos).",
+    },
+  },
+  {
+    id: "pro-04",
+    tema: "productividad",
+    tipo: "completar",
+    enunciado:
+      "Cuando el viento húmedo choca con una montaña, asciende por la ladera de ___, se enfría y llueve. Del otro lado, a ___, el aire desciende seco y se forma una sombra de lluvia. El viento Zonda, que baja seco y caliente sobre Mendoza, es un ejemplo de efecto ___.",
+    blancos: [["barlovento"], ["sotavento"], ["foehn", "fohn"]],
+    justificacion:
+      "La precipitación orográfica ocurre a barlovento, la ladera que recibe el viento húmedo. A sotavento el aire ya perdió su humedad y se calienta por compresión al descender. El Zonda es el aire del Pacífico que descarga nieve y lluvia en Chile y la cordillera y baja seco y cálido del lado argentino: el efecto Foehn.",
+    teoria: `
+      <ul>
+        <li><strong>Barlovento:</strong> la ladera oriental del Aconquija (Tucumán) recibe los vientos húmedos del este y tiene selva de Yungas.</li>
+        <li><strong>Sotavento:</strong> detrás de las sierras queda la sombra de lluvia, como el valle de Santa María (árido).</li>
+        <li><strong>Zonda:</strong> efecto Foehn sobre Mendoza y San Juan.</li>
+      </ul>
+      <p><strong>Las lluvias en Argentina:</strong> en el norte y centro la humedad viene del Atlántico y la Amazonía, y las lluvias disminuyen de este a oeste (≈ 2.000 mm en Misiones a &lt; 200 mm en el Monte), con lluvias de verano. En Patagonia la humedad viene del Pacífico y las lluvias disminuyen de oeste a este, con lluvias de invierno. Entre ambos sistemas queda la <em>diagonal árida</em>.</p>`,
+    fuente: "2 Factores de productividad (controles locales)",
+    flash: {
+      frente: "¿Por qué hay Yungas en la ladera oriental de las sierras del NOA y zonas áridas detrás?",
+      dorso: "Por la lluvia orográfica: el aire húmedo del este asciende a barlovento y llueve. A sotavento desciende seco y se forma una sombra de lluvia (por ejemplo, el valle de Santa María).",
+    },
+  },
+  {
+    id: "pro-05",
+    tema: "productividad",
+    tipo: "vf",
+    enunciado:
+      "En zonas áridas como el Monte, la PPN aumenta casi linealmente con la precipitación anual, porque el agua es el principal factor limitante.",
+    opciones: ["Verdadero", "Falso"],
+    correcta: 0,
+    justificacion:
+      "Es verdadero. En zonas áridas el agua es el principal limitante, así que cada mm extra de lluvia se traduce en más producción. En zonas húmedas, en cambio, pasan a limitar la temperatura, la luz o los nutrientes.",
+    teoria: `
+      <p><strong>Implicancias en los sistemas de producción:</strong></p>
+      <ul>
+        <li><strong>Ganadería:</strong> la PPN forrajera determina la receptividad (carga animal sostenible). Si se supera, hay sobrepastoreo → menos cobertura → erosión y desertificación.</li>
+        <li><strong>Agricultura:</strong> el rendimiento depende del período libre de heladas, del balance hídrico (se ve en el climograma) y de la radiación. En zonas áridas depende del riego: los oasis de Mendoza dependen del agua de deshielo.</li>
+        <li><strong>Forestal:</strong> la productividad de madera del algarrobo en el Monte es muy baja (Alvarez et al., 2011), así que la extracción de leña debe regularse.</li>
+        <li><strong>Cambio climático:</strong> al cambiar T, lluvias y estacionalidad, cambia dónde y cuánto se puede producir (TP 2, la vid en Mendoza).</li>
+      </ul>
+      <p>La biodiversidad también puede aumentar la PPN por <strong>complementariedad de nicho</strong> y <strong>facilitación</strong> (plantas nodriza, como los pastos bajo la copa del algarrobo).</p>`,
+    fuente: "2 Factores de productividad (implicancias en la producción)",
+    flash: {
+      frente: "¿Qué limita la PPN en zonas áridas y en zonas húmedas?",
+      dorso: "En zonas áridas, sobre todo el agua: la PPN sube casi linealmente con la precipitación. En zonas húmedas pasan a limitar la temperatura, la luz o los nutrientes.",
+    },
+  },
+
   // ───────────── CLIMA Y VEGETACIÓN ─────────────
   {
     id: "cli-01",
@@ -241,6 +404,37 @@ window.PREGUNTAS = [
     },
   },
 
+  {
+    id: "cli-05",
+    tema: "clima",
+    tipo: "mc",
+    enunciado:
+      "En un pastizal, varias especies de gramíneas cumplen la misma función de fijar el suelo. Tras una sequía desaparece una de ellas, pero las otras mantienen esa función. ¿Qué concepto ilustra este caso?",
+    opciones: [
+      "Redundancia funcional",
+      "Complementariedad de nicho",
+      "Facilitación",
+      "Teleconexión",
+    ],
+    correcta: 0,
+    justificacion:
+      "Hay redundancia funcional cuando varias especies cumplen la misma función: si una falla, otra con atributos parecidos la reemplaza, y eso le da resiliencia al sistema. La complementariedad es lo contrario: especies que usan recursos distintos. La facilitación es cuando una planta mejora el microambiente de otra.",
+    teoria: `
+      <p><strong>La diversidad funcional se organiza en tres niveles:</strong></p>
+      <ul>
+        <li><strong>Servicios ecosistémicos:</strong> beneficios para las personas: de aprovisionamiento, de regulación, de soporte y culturales.</li>
+        <li><strong>Funciones ecosistémicas:</strong> procesos como la captura de C (PPN), la absorción de agua y nutrientes, la fijación de N, la descomposición y la fijación de suelos.</li>
+        <li><strong>Atributos funcionales:</strong> rasgos medibles (morfológicos, anatómicos, bioquímicos, fisiológicos como C3/C4/CAM y fenológicos) que afectan la respuesta al ambiente o el efecto sobre el ecosistema. Base de datos global: TRY.</li>
+      </ul>
+      <p><strong>Tipos funcionales de plantas</strong> (Díaz et al., 2002): grupos de especies con atributos y respuestas parecidas, sin importar su parentesco. Se definen según la escala y la pregunta.</p>
+      <p>La diversidad funcional da resiliencia (redundancia) y permite aumentar los servicios. Se cuantifica, por ejemplo, con el índice de Rao.</p>`,
+    fuente: "3 Diversidad funcional",
+    flash: {
+      frente: "¿Qué es un tipo funcional de plantas y qué aporta la redundancia funcional?",
+      dorso: "Un grupo de especies con atributos y respuestas parecidas al ambiente, sin importar su parentesco. La redundancia (varias especies con la misma función) da resiliencia: si una falla, otra la reemplaza.",
+    },
+  },
+
   // ───────────── SIG ─────────────
   {
     id: "sig-01",
@@ -326,6 +520,57 @@ window.PREGUNTAS = [
     flash: {
       frente: "¿En qué se diferencian el sistema de referencia y el sistema de proyección?",
       dorso: "El de referencia ubica el punto en la Tierra (elipsoide + datum, lat/long). La proyección lo pasa al plano (x, y en m) y siempre deforma algo. Ej.: Gauss-Krüger, 7 fajas.",
+    },
+  },
+
+  {
+    id: "sig-04",
+    tema: "sig",
+    tipo: "mc",
+    enunciado:
+      "Descargaste la capa de Áreas Naturales Protegidas de Mendoza en coordenadas geográficas (WGS84) y querés calcular su superficie en m². ¿Qué tenés que hacer primero?",
+    opciones: [
+      "Reproyectarla a un sistema plano en metros, como Gauss-Krüger faja 2 (EPSG:22192)",
+      "Rasterizarla, porque solo en raster se pueden calcular áreas",
+      "Nada: la calculadora de campos convierte los grados a m² automáticamente",
+      "Cambiar el datum de WGS84 a POSGAR",
+    ],
+    correcta: 0,
+    justificacion:
+      "En coordenadas geográficas las unidades son grados, y un grado de longitud no mide lo mismo en el ecuador que en Ushuaia. Para obtener perímetros en m y áreas en m² hay que reproyectar a un sistema plano. Mendoza cae en la faja 2 de Gauss-Krüger. Cambiar a POSGAR no sirve: sigue siendo un sistema de referencia en grados, y en la práctica coincide con WGS84.",
+    teoria: `
+      <p><strong>Gauss-Krüger</strong> es la proyección oficial argentina: cilíndrica transversal, con 7 fajas de 3° de ancho, cada una con su meridiano central (faja 1 = 72° O, faja 2 = 69° O, faja 3 = 66° O…). Las coordenadas son planas, en metros.</p>
+      <p><strong>Toda proyección deforma</strong> algo: Mercator conserva los ángulos (conforme), Peters conserva las áreas (equivalente) y Robinson es de compromiso. En Gauss-Krüger la deformación es mínima cerca del meridiano central de cada faja.</p>
+      <p><strong>En el TP 3:</strong> se reproyectaron las ANP a EPSG:22192 y con la calculadora de campos se obtuvieron perímetro y área. Así se vio que Laguna del Diamante (1.980,37 km²) es la tercera ANP más grande de Mendoza.</p>`,
+    fuente: "4 SIG · TP 3",
+    flash: {
+      frente: "¿Por qué hay que proyectar una capa antes de calcular áreas, y en qué faja Gauss-Krüger cae Mendoza?",
+      dorso: "Porque en coordenadas geográficas la unidad es el grado, que no equivale a una distancia constante. Hay que pasar a un sistema plano en metros. Mendoza cae en la faja 2 (EPSG:22192).",
+    },
+  },
+  {
+    id: "sig-05",
+    tema: "sig",
+    tipo: "vf",
+    enunciado:
+      "Al rasterizar una capa de polígonos (vector → raster) no se pierde precisión, siempre que el tamaño de píxel sea grande.",
+    opciones: ["Verdadero", "Falso"],
+    correcta: 1,
+    justificacion:
+      "Es falso. Al rasterizar, los límites precisos del vector se aproximan con celdas cuadradas y quedan “escalonados”. Cuanto más GRANDE es el píxel, peor es la aproximación. Con píxeles más chicos el borde se parece más al original, pero el archivo pesa más. Y al poligonizar un raster no se recupera la precisión: los polígonos heredan el escalonado.",
+    teoria: `
+      <p><strong>Ambos modelos son interconvertibles:</strong></p>
+      <ul>
+        <li><strong>Poligonizar</strong> (raster → vector): las celdas se transforman en polígonos.</li>
+        <li><strong>Rasterizar</strong> (vector → raster): las entidades se expresan en una grilla.</li>
+      </ul>
+      <p><strong>El dato geográfico</strong> se describe con tres tipos de descriptores: <em>atributos</em> (semánticos: qué es), <em>ubicación</em> (geométricos: coordenadas) y <em>relaciones espaciales</em> (topológicos: adyacencia, inclusión, conectividad).</p>
+      <p>Cada capa tiene un solo modelo de representación, y cada capa vectorial un solo tipo de entidad (puntos, líneas o polígonos).</p>
+      <p><strong>Operaciones espaciales:</strong> la intersección devuelve la zona de solape, con las geometrías recortadas y los atributos de ambas capas. Otras: unión, recorte (clip), buffer, disolución y selección por localización.</p>`,
+    fuente: "4 SIG · TP 3",
+    flash: {
+      frente: "¿En qué conversión se pierde precisión y qué pasa al achicar el píxel?",
+      dorso: "Al rasterizar (vector → raster), porque los límites quedan escalonados. Con píxeles más chicos el borde se parece más al original, pero el archivo pesa más.",
     },
   },
 
@@ -455,6 +700,37 @@ window.PREGUNTAS = [
     },
   },
 
+  {
+    id: "tel-05",
+    tema: "teledeteccion",
+    tipo: "mc",
+    enunciado:
+      "Querés seguir día a día el reverdecimiento (la fenología) de los pastizales de toda una región durante una temporada. ¿Qué sensor conviene y por qué?",
+    opciones: [
+      "MODIS: revisita diaria, aunque con píxeles grandes (250 m)",
+      "Landsat 8: píxel de 30 m y revisita cada 16 días",
+      "Una imagen pancromática de muy alta resolución de una sola fecha",
+      "Cualquiera, porque todos los sensores tienen la misma frecuencia de revisita",
+    ],
+    correcta: 0,
+    justificacion:
+      "Hay un compromiso entre resoluciones: los sensores de píxel chico revisitan menos seguido, y los de revisita diaria tienen píxeles grandes. Para seguir la fenología importa la resolución TEMPORAL, así que conviene MODIS. Para mapear parcelas chicas convendría alta resolución espacial (Sentinel-2 o Landsat).",
+    teoria: `
+      <ul>
+        <li><strong>Espacial:</strong> tamaño del píxel (Landsat 30 m, Sentinel-2 10 m, MODIS 250 m).</li>
+        <li><strong>Temporal:</strong> revisita (Landsat 16 días, 8 combinando L8 y L9; Sentinel-2 5 días en constelación; MODIS diaria).</li>
+        <li><strong>Espectral:</strong> número y ancho de bandas: pancromático (1), multiespectral (3-30), hiperespectral (32-256).</li>
+        <li><strong>Radiométrica:</strong> niveles de energía que distingue: 8 bit = 2⁸ = 256 niveles; 16 bit = 65.536.</li>
+      </ul>
+      <p><strong>Landsat 8/9, sensor OLI:</strong> B2 azul, B3 verde, B4 rojo, B5 NIR, B6 SWIR1, B7 SWIR2. La serie Landsat tiene imágenes desde 1972, lo que permite analizar cambios de largo plazo.</p>
+      <p><strong>Sensores pasivos</strong> registran la energía solar reflejada o emitida. Los <strong>activos</strong> (radar, LiDAR) emiten su propia energía.</p>`,
+    fuente: "5 Teledetección",
+    flash: {
+      frente: "¿Qué es el compromiso entre resoluciones y cuántos niveles distingue un sensor de 8 bits?",
+      dorso: "Los sensores de píxel chico suelen revisitar menos seguido, y los de revisita diaria (MODIS) tienen píxeles grandes. Un sensor de 8 bits distingue 2⁸ = 256 niveles.",
+    },
+  },
+
   // ───────────── PAISAJE ─────────────
   {
     id: "pai-01",
@@ -545,6 +821,62 @@ window.PREGUNTAS = [
     flash: {
       frente: "¿Cuáles son los 3 efectos de la fragmentación?",
       dorso: "1) Reducción de la superficie de los parches, 2) aislamiento de los fragmentos y 3) aumento del efecto borde. Los tres elevan el riesgo de extinción.",
+    },
+  },
+
+  {
+    id: "pai-04",
+    tema: "paisaje",
+    tipo: "mc",
+    enunciado:
+      "Una ruta atraviesa un humedal. Para los anfibios funciona como una barrera parcial: solo algunos individuos logran cruzarla. ¿Qué función de los corredores describe este caso?",
+    opciones: [
+      "Filtro",
+      "Conducción",
+      "Fuente",
+      "Hábitat",
+    ],
+    correcta: 0,
+    justificacion:
+      "La función de filtro es la de un corredor que actúa como barrera absoluta, parcial o inexistente según la especie. La ruta es un elemento lineal que, para los anfibios, filtra el paso. La conducción, en cambio, es facilitar el desplazamiento por el interior del corredor.",
+    teoria: `
+      <p><strong>Funciones de los corredores:</strong></p>
+      <ul>
+        <li><strong>Conducción:</strong> facilitan el desplazamiento por su interior (dependen del ancho, el largo y las discontinuidades).</li>
+        <li><strong>Filtro:</strong> barrera absoluta, parcial o inexistente según la especie.</li>
+        <li><strong>Hábitat:</strong> los lineales (angostos) sirven a generalistas; los de franja (anchos), a especialistas.</li>
+        <li><strong>Fuente:</strong> permiten que las especies se expandan hacia la matriz.</li>
+        <li><strong>Sumidero:</strong> dan refugio a especies de la matriz o las absorben.</li>
+      </ul>
+      <p>Los corredores reducen el <em>efecto distancia</em> de la Teoría de Biogeografía de Islas. <strong>Riesgos:</strong> pueden facilitar la expansión de invasoras, patógenos o depredadores, y la propagación del fuego.</p>
+      <p><strong>Tipos:</strong> lineal, con nodos, “stepping stones” (pasaderas) y mosaico.</p>`,
+    fuente: "6 Ecología del paisaje",
+    flash: {
+      frente: "¿Cuáles son las 5 funciones de los corredores?",
+      dorso: "Conducción, filtro, hábitat, fuente y sumidero.",
+    },
+  },
+  {
+    id: "pai-05",
+    tema: "paisaje",
+    tipo: "vf",
+    enunciado: "“Pastizal” y “campo ganadero” son dos categorías de cobertura de la tierra.",
+    opciones: ["Verdadero", "Falso"],
+    correcta: 1,
+    justificacion:
+      "Es falso. “Pastizal” es una cobertura: la naturaleza física o biótica que recubre la superficie, lo que “se ve”. “Campo ganadero” es un uso del suelo: lo que hacen las personas con ese territorio. Un mismo pastizal puede tener uso ganadero o ser una reserva.",
+    teoria: `
+      <ul>
+        <li><strong>Cobertura de la tierra:</strong> agua, suelo desnudo, bosque, pastizal. Es lo que se detecta en una imagen satelital.</li>
+        <li><strong>Uso del suelo:</strong> agrícola, ganadero, urbano, industrial, recreativo, de conservación.</li>
+      </ul>
+      <p>Los cambios de cobertura y uso son la principal causa directa de pérdida de biodiversidad terrestre (IPBES, 2019). A medida que avanza la transición de uso, del ecosistema natural a la agricultura intensiva y la urbanización, se pierden servicios ecosistémicos (Foley et al., 2005).</p>
+      <p><strong>Detección de cambios:</strong> datos multitemporales (censos agropecuarios, imágenes satelitales), análisis cuantitativos (índices, clasificación) y modelado de escenarios futuros (tendencial, pesimista, deseable).</p>
+      <p><strong>En el TP 5</strong> se hizo un mapa de cobertura y uso con clasificación no supervisada (k-means): clases espectralmente parecidas, como urbano y suelo desnudo, tienden a confundirse.</p>`,
+    fuente: "6 Ecología del paisaje · TP 5",
+    flash: {
+      frente: "Cobertura de la tierra vs. uso del suelo",
+      dorso: "La cobertura es lo físico o biótico que recubre la superficie (bosque, agua, pastizal). El uso es lo que hacen las personas con el territorio (ganadería, agricultura, conservación).",
     },
   },
 
@@ -661,6 +993,42 @@ window.PREGUNTAS = [
     },
   },
 
+  {
+    id: "res-05",
+    tema: "restauracion",
+    tipo: "mc",
+    enunciado:
+      "En un campo del piedemonte se retiró el ganado hace 10 años, pero la vegetación no se recupera: el suelo está erosionado y compactado. ¿Qué tipo de barrera hay y qué medida corresponde?",
+    opciones: [
+      "Un umbral abiótico: hacen falta modificaciones físicas, como control de la erosión y enmiendas del suelo",
+      "Un umbral biótico: alcanza con sembrar especies nativas",
+      "No hay ningún umbral: solo hay que esperar más tiempo con la clausura",
+      "Un umbral biótico: hay que controlar las especies exóticas",
+    ],
+    correcta: 0,
+    justificacion:
+      "Si sacar el disturbio (la restauración pasiva) no alcanza, el sistema cruzó un umbral. Como el problema es el suelo (erosión, compactación), es un umbral abiótico, que requiere modificaciones físico-químicas. Sembrar sin arreglar el suelo probablemente fracasaría. Los umbrales bióticos son la falta de semillas, la dominancia de invasoras o la pérdida de polinizadores y dispersores.",
+    teoria: `
+      <p>Después de un disturbio, el ecosistema puede recuperarse solo, quedarse degradado o pasar a un <strong>estado alternativo estable</strong>.</p>
+      <ul>
+        <li><strong>Umbral biótico:</strong> faltan propágulos, dominan invasoras, se perdieron polinizadores o dispersores → siembra, plantación, control de exóticas.</li>
+        <li><strong>Umbral abiótico:</strong> suelo erosionado, compactado o salinizado, hidrología alterada → control de erosión, enmiendas, reconexión hídrica.</li>
+      </ul>
+      <p><strong>Prácticas según el potencial de regeneración natural</strong> (Gann et al., SER):</p>
+      <ol>
+        <li><strong>Regeneración natural espontánea</strong> (pasiva): eliminar la causa (clausuras, suprimir el fuego).</li>
+        <li><strong>Facilitada:</strong> además, control de exóticas, perchas para aves, protección de renovales.</li>
+        <li><strong>Asistida:</strong> enriquecimiento con siembra o plantación, control de la erosión.</li>
+        <li><strong>Reconstrucción</strong> (activa): rehacer el sustrato y reintroducir casi todas las especies.</li>
+      </ol>
+      <p>Cuanto más degradado el sistema, más barreras hay que superar y más cara es la intervención.</p>`,
+    fuente: "7 Restauración",
+    flash: {
+      frente: "Umbral biótico vs. abiótico: ¿qué son y qué medidas requiere cada uno?",
+      dorso: "Biótico: faltan semillas, dominan invasoras o se perdieron dispersores → siembra, plantación, control de exóticas. Abiótico: suelo erosionado, compactado o salinizado → control de erosión, enmiendas, reconexión hídrica.",
+    },
+  },
+
   // ───────────── EIA ─────────────
   {
     id: "eia-01",
@@ -687,6 +1055,123 @@ window.PREGUNTAS = [
     flash: {
       frente: "¿Qué diferencia hay entre la EIA y el EsIA, y qué se registra en la matriz de Leopold?",
       dorso: "La EIA es el procedimiento técnico-administrativo preventivo. El EsIA es el documento técnico que presenta el proponente. En Leopold se registran la magnitud (±1-10) y la importancia (1-10) de cada impacto.",
+    },
+  },
+
+  {
+    id: "eia-02",
+    tema: "eia",
+    tipo: "completar",
+    enunciado:
+      "El procedimiento técnico-administrativo completo, que conduce la autoridad, es la ___. El documento técnico que elabora y presenta el proponente es el ___. El acto final por el que la autoridad aprueba (con condiciones) o rechaza el proyecto es la ___.",
+    blancos: [
+      ["EIA", "evaluacion de impacto ambiental"],
+      ["EsIA", "estudio de impacto ambiental"],
+      ["DIA", "declaracion de impacto ambiental"],
+    ],
+    justificacion:
+      "Son tres cosas distintas que suelen confundirse. La EIA es el procedimiento preventivo entero. El EsIA es uno de sus insumos: el estudio que presenta quien quiere hacer el proyecto. La DIA es la decisión de la autoridad, que cierra el procedimiento.",
+    teoria: `
+      <p><strong>Etapas del procedimiento (esquema general):</strong></p>
+      <ol>
+        <li>El proponente presenta el EsIA (o la manifestación de impacto).</li>
+        <li>La autoridad ambiental inicia el procedimiento.</li>
+        <li>Dictamen técnico (de una universidad u organismo científico, como el IADIZA en ANP) y dictámenes sectoriales.</li>
+        <li>Consulta pública.</li>
+        <li>Audiencia pública.</li>
+        <li>Declaración de Impacto Ambiental (DIA).</li>
+      </ol>
+      <p><strong>Marco legal:</strong> la Ley 25.675 (General del Ambiente) incluye la EIA entre los instrumentos de política ambiental (art. 8) y exige que toda obra que pueda degradar el ambiente se someta a EIA antes de ejecutarse (art. 11). En Mendoza rige la Ley 5.961 (1993). Según el proyecto, la competencia es provincial (minería, energía, hidrocarburos) o municipal (barrios, cementerios, proyectos urbanos).</p>`,
+    fuente: "9 EIA",
+    flash: {
+      frente: "¿Qué son la EIA, el EsIA y la DIA?",
+      dorso: "EIA: el procedimiento completo que conduce la autoridad. EsIA: el documento técnico del proponente. DIA: la decisión final de la autoridad (aprueba con condiciones o rechaza).",
+    },
+  },
+  {
+    id: "eia-03",
+    tema: "eia",
+    tipo: "unir",
+    enunciado:
+      "Para un camping en el piedemonte, uní cada paso de la jerarquía de mitigación con la medida que le corresponde.",
+    pares: [
+      { izq: "Evitar", der: "No ubicar las parcelas sobre cauces aluvionales ni sobre suelos con biocostras" },
+      { izq: "Minimizar", der: "Delimitar senderos y restringir la circulación de vehículos" },
+      { izq: "Restaurar", der: "Revegetar con nativas las áreas usadas durante la obra" },
+      { izq: "Compensar", der: "Financiar la conservación de un área equivalente dentro de la reserva" },
+    ],
+    justificacion:
+      "La jerarquía se aplica en orden: primero se evitan los impactos desde el diseño y la localización; los inevitables se minimizan en escala espacial o temporal; las áreas degradadas se restauran; y solo los impactos residuales se compensan. Todo con monitoreo continuo, plan de cierre y evaluación posoperativa.",
+    teoria: `
+      <ol>
+        <li><strong>Evitar:</strong> prevención mediante planificación y diseño responsable, o cambio de localización.</li>
+        <li><strong>Minimizar:</strong> reducir la escala espacial o temporal de los impactos inevitables con técnicas y buenas prácticas.</li>
+        <li><strong>Restaurar o remediar</strong> las áreas degradadas.</li>
+        <li><strong>Compensar</strong> los impactos residuales, por ejemplo conservando un área equivalente.</li>
+      </ol>
+      <p><strong>El piedemonte es frágil:</strong> suelos con biocostras (que destruyen el pisoteo y los vehículos), pendientes con riesgo de erosión y aluviones, vegetación del Monte de crecimiento lento y fauna nativa, además de la presión de urbanización, basurales e incendios.</p>`,
+    fuente: "9 EIA · TP 7",
+    flash: {
+      frente: "¿Cuál es el orden de la jerarquía de mitigación?",
+      dorso: "1) Evitar, 2) minimizar, 3) restaurar o remediar y 4) compensar los impactos residuales. Siempre con monitoreo continuo.",
+    },
+  },
+  {
+    id: "eia-04",
+    tema: "eia",
+    tipo: "mc",
+    enunciado:
+      "En una matriz de Leopold, la celda “pérdida de combustible × agua subterránea” se valoró como −4 / 9. ¿Cómo se interpreta?",
+    opciones: [
+      "Un impacto adverso de magnitud moderada, pero de importancia muy alta, por ejemplo porque es irreversible y afecta un acuífero",
+      "Un impacto benéfico de importancia baja",
+      "Un error: la magnitud y la importancia siempre deben tener el mismo valor",
+      "Un impacto adverso grave, porque −4 + 9 = 5 supera el umbral de aprobación",
+    ],
+    correcta: 0,
+    justificacion:
+      "El primer número es la magnitud: la intensidad del cambio, con signo (− = adverso). El segundo es la importancia: la relevancia del impacto según su extensión, persistencia y reversibilidad, sin signo. Un derrame chico puede alterar poco el agua en intensidad pero ser muy importante, porque contaminar un acuífero es prácticamente irreversible. Los dos valores no se suman.",
+    teoria: `
+      <p><strong>Matriz de Leopold (1971):</strong> cruza ≈ 100 acciones humanas con 88 factores ambientales (en la práctica se usa una versión simplificada) y evalúa a la vez impactos positivos y negativos.</p>
+      <ul>
+        <li><strong>Magnitud</strong> (1-10, con signo): intensidad del cambio. Ej.: deforestar 5 ha = −7.</li>
+        <li><strong>Importancia</strong> (1-10, sin signo): relevancia según extensión, persistencia y reversibilidad. Ej.: contaminación de un acuífero local = 9.</li>
+      </ul>
+      <p>Al sumar por factor se ve cuál es el más afectado, y al sumar por acción, cuál es la más negativa: ahí se proponen las medidas de mitigación.</p>
+      <p><strong>Ejemplo (guía del TP 7):</strong> la construcción de caminos tiene impactos negativos sobre el suelo, la vegetación y la fauna, pero positivos sobre la población (+7 / 8, por el acceso).</p>`,
+    fuente: "9 EIA · TP 7",
+    flash: {
+      frente: "Leopold: ¿qué diferencia hay entre magnitud e importancia?",
+      dorso: "La magnitud es la intensidad del cambio (±1-10, con signo). La importancia es la relevancia del impacto según su extensión, persistencia y reversibilidad (1-10, sin signo).",
+    },
+  },
+  {
+    id: "eia-05",
+    tema: "eia",
+    tipo: "mc",
+    enunciado:
+      "Un gobierno provincial quiere evaluar las consecuencias ambientales de su nuevo plan de ordenamiento territorial, antes de aprobarlo. ¿Qué instrumento corresponde?",
+    opciones: [
+      "Una Evaluación Ambiental Estratégica (EAE)",
+      "Una Evaluación de Impacto Ambiental (EIA) de proyecto",
+      "Una Declaración de Impacto Ambiental (DIA)",
+      "Una matriz de Leopold, sin necesidad de ningún procedimiento",
+    ],
+    correcta: 0,
+    justificacion:
+      "La EAE se aplica a políticas, planes o programas gubernamentales, como un plan de ordenamiento. La EIA se aplica a proyectos concretos de obras o actividades. La DIA es el acto final de una EIA, y la matriz de Leopold es solo un método de valoración dentro del estudio.",
+    teoria: `
+      <ul>
+        <li><strong>Evaluación ambiental (EA):</strong> el conjunto de herramientas y procedimientos que permiten tomar decisiones informadas sobre las implicancias ambientales.</li>
+        <li><strong>EIA:</strong> para proyectos de obras o actividades.</li>
+        <li><strong>EAE:</strong> para políticas, planes y programas.</li>
+      </ul>
+      <p><strong>Impacto ambiental:</strong> cualquier cambio adverso <em>o beneficioso</em> en el ambiente que resulte de actividades humanas (UNEP).</p>
+      <p><strong>Características de la EIA:</strong> participativa, multidisciplinaria, preventiva (antes de ejecutar) y sistemática. Debe considerar todo el ciclo de vida del proyecto (construcción, operación, cierre y poscierre), porque los impactos cambian en cada fase.</p>`,
+    fuente: "9 EIA",
+    flash: {
+      frente: "¿Qué diferencia hay entre una EIA y una EAE?",
+      dorso: "La EIA evalúa proyectos concretos de obras o actividades. La EAE evalúa políticas, planes o programas gubernamentales.",
     },
   },
 
@@ -720,6 +1205,109 @@ window.PREGUNTAS = [
     flash: {
       frente: "¿Qué diferencia hay entre REDD+ y ARR?",
       dorso: "REDD+ acredita la deforestación o degradación evitada respecto de una línea de base. ARR acredita el carbono capturado en nueva biomasa por forestación, reforestación o revegetación.",
+    },
+  },
+  {
+    id: "car-02",
+    tema: "carbono",
+    tipo: "mc",
+    enunciado:
+      "En una parcela se estimaron, con ecuaciones alométricas, 10 t de biomasa leñosa seca. ¿A cuántas t CO₂e equivale? (CF = 0,47)",
+    opciones: [
+      "≈ 17,2 t CO₂e",
+      "4,7 t CO₂e",
+      "≈ 36,7 t CO₂e",
+      "≈ 1,3 t CO₂e",
+    ],
+    correcta: 0,
+    justificacion:
+      "Primero se pasa de biomasa a carbono: 10 × 0,47 = 4,7 t C. Después de carbono a CO₂ con la relación de pesos moleculares: 4,7 × 44/12 ≈ 17,2 t CO₂e. La opción 4,7 se queda en el carbono; 36,7 se olvida de la fracción de C; y 1,3 divide por 44/12 en lugar de multiplicar.",
+    teoria: `
+      <p><strong>De la biomasa al crédito:</strong></p>
+      <ol>
+        <li><strong>Biomasa</strong> (t de materia seca): con ecuaciones alométricas (no destructivas) o por cosecha.</li>
+        <li><strong>Carbono</strong> = biomasa × CF. Leñosa: 0,47 t C/t m.s.; hojarasca: 0,37.</li>
+        <li><strong>CO₂e</strong> = C × 44/12 (≈ 3,67).</li>
+        <li><strong>Por hectárea:</strong> se divide por el área de la parcela, se suma por reservorio y se expande al área del proyecto.</li>
+      </ol>
+      <p><strong>Ecuaciones alométricas:</strong> relacionan la biomasa con variables fáciles de medir (DAP, altura, diámetro de copa). Son específicas de cada especie y región. Verra exige que se deriven de al menos 30 individuos, con r² ≥ 0,8.</p>
+      <p><strong>Biomasa subterránea (TP 6):</strong> con la relación raíz/vástago R = 0,56 si la biomasa aérea es &lt; 20 t m.s./ha, y 0,28 si es mayor.</p>`,
+    fuente: "8 Créditos de carbono · TP 6",
+    flash: {
+      frente: "¿Cómo se pasa de biomasa a t CO₂e?",
+      dorso: "Biomasa × fracción de C (0,47 para leñosas) = t C. Luego t C × 44/12 (≈ 3,67) = t CO₂e.",
+    },
+  },
+  {
+    id: "car-03",
+    tema: "carbono",
+    tipo: "vf",
+    enunciado:
+      "Un proyecto que vende créditos por “proteger” un bosque que ya está protegido por ley cumple claramente con el requisito de adicionalidad.",
+    opciones: ["Verdadero", "Falso"],
+    correcta: 1,
+    justificacion:
+      "Es falso. Una de las pruebas de adicionalidad es el excedente regulatorio: si la ley ya obliga a hacerlo, la reducción habría ocurrido igual sin los créditos, así que no es adicional. Por eso es discutido acreditar la protección de una reserva que ya está protegida por ley.",
+    teoria: `
+      <p><strong>Adicionalidad:</strong> ¿pasaría igual sin los créditos? Cuatro pruebas:</p>
+      <ol>
+        <li><strong>Inversión:</strong> sin la venta de créditos el proyecto no sería rentable.</li>
+        <li><strong>Barreras:</strong> hay obstáculos financieros, tecnológicos o institucionales.</li>
+        <li><strong>Práctica común:</strong> no es algo que ya se haga sin incentivo.</li>
+        <li><strong>Excedente regulatorio:</strong> no está exigido por ley.</li>
+      </ol>
+      <p><strong>Requisitos del VCS (Verra):</strong> la reducción debe ser real, medible, permanente, adicional y verificada.</p>
+      <p>Hay además reglas externas de calidad: ICVCM (principios de integridad), CORSIA (aerolíneas) y el sello CCB (beneficios para el clima, las comunidades y la biodiversidad).</p>`,
+    fuente: "8 Créditos de carbono",
+    flash: {
+      frente: "¿Cuáles son las 4 pruebas de adicionalidad?",
+      dorso: "1) Inversión (no es rentable sin créditos), 2) barreras, 3) práctica común (no se hace habitualmente) y 4) excedente regulatorio (no lo exige la ley).",
+    },
+  },
+  {
+    id: "car-04",
+    tema: "carbono",
+    tipo: "completar",
+    enunciado:
+      "Créditos = línea de base − proyecto − ___ − ___. El primer descuento corresponde a las emisiones desplazadas fuera del área del proyecto; el segundo, a la reserva de créditos que funciona como seguro ante el riesgo de no permanencia.",
+    blancos: [["fugas", "fuga"], ["buffer", "reserva", "fondo buffer"]],
+    justificacion:
+      "Las fugas son las emisiones que se “mudan” fuera del área: por ejemplo, la deforestación que se traslada al campo vecino. El buffer es la parte de los créditos que Verra retiene en un fondo común según el riesgo de que el carbono vuelva a la atmósfera (incendios, tala, plagas): cuanto mayor el riesgo, mayor la reserva.",
+    teoria: `
+      <ul>
+        <li><strong>Línea de base:</strong> el escenario sin proyecto. En REDD+, cuánta deforestación se proyecta sin intervención; en ARR, el carbono que ya hay antes de plantar.</li>
+        <li><strong>Fugas:</strong> desplazamiento de emisiones fuera del área. Se descuentan, igual que la incertidumbre.</li>
+        <li><strong>Permanencia y buffer:</strong> el carbono forestal puede volver a la atmósfera. Verra usa una herramienta de riesgo de no permanencia y guarda parte de los créditos en un fondo común que funciona como seguro colectivo.</li>
+      </ul>
+      <p><strong>Recorrido del crédito:</strong> proyecto → validación → verificación → registro (Verra emite VCU únicos) → venta → retiro (ya no puede revenderse).</p>`,
+    fuente: "8 Créditos de carbono",
+    flash: {
+      frente: "¿Qué son las fugas y el buffer en un proyecto de carbono?",
+      dorso: "Fugas: emisiones desplazadas fuera del área del proyecto. Buffer: reserva de créditos que funciona como seguro ante la no permanencia (incendios, tala, plagas).",
+    },
+  },
+  {
+    id: "car-05",
+    tema: "carbono",
+    tipo: "unir",
+    enunciado: "Uní cada reservorio de carbono con la forma en que se midió en el TP 6 (Telteca).",
+    pares: [
+      { izq: "Árboles vivos (VMD0001)", der: "Parcelas circulares de 500 m², DAP a 1,30 m y ecuación alométrica" },
+      { izq: "Arbustos (no árboles)", der: "Dos diámetros de copa perpendiculares y la altura" },
+      { izq: "Hojarasca (VMD0003)", der: "Marcos de 50 × 50 cm, tamizado de la arena y secado en estufa" },
+      { izq: "Madera muerta caída (VMD0002)", der: "Intersección de líneas de 50 m, midiendo piezas ≥ 10 cm" },
+    ],
+    justificacion:
+      "Cada reservorio tiene su protocolo según los módulos de Verra. Los árboles se miden en parcelas con DAP y alometría; los arbustos, con el diámetro de copa y la altura; la hojarasca se cosecha en marcos y se corrige la humedad; y la madera caída se estima por intersección de líneas, con clases de densidad según la prueba del machete.",
+    teoria: `
+      <p><strong>Los cuatro reservorios:</strong> biomasa viva (VMD0001), madera muerta (VMD0002), hojarasca (VMD0003) y carbono orgánico del suelo (VMD0004).</p>
+      <p><strong>Línea de base cero:</strong> la medición inicial del stock de carbono antes de cualquier proyecto; es la referencia contra la que se medirá la adición futura.</p>
+      <p><strong>Telteca:</strong> bosque de algarrobo dulce (<em>Neltuma flexuosa</em>) en médanos e intermédanos. Hipótesis del TP: hay más C cerca de los intermédanos (más agua, napa accesible) y menos cerca de los puestos (tala y pastoreo).</p>
+      <p><strong>Bibliografía:</strong> Magnano et al. (2023) encontraron menos diversidad de leñosas y menos C cerca de los puestos ganaderos; Vázquez et al. (2011) mostraron que extraer la madera muerta afecta el funcionamiento del bosque.</p>`,
+    fuente: "8 Créditos de carbono · TP 6",
+    flash: {
+      frente: "¿Cuáles son los 4 reservorios de carbono y sus módulos de Verra?",
+      dorso: "Biomasa viva (VMD0001), madera muerta (VMD0002), hojarasca (VMD0003) y carbono orgánico del suelo (VMD0004).",
     },
   },
 ];

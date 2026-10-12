@@ -6,14 +6,14 @@
   bajada: "Qué limita la fijación de carbono, desde la hoja hasta el planeta, y qué factores explican el clima de cada lugar.",
   programa: "b) Controles de la productividad primaria neta. Implicancias en los sistemas de producción.",
   clases: ["2 · Factores de productividad (J. Aranibar)"],
-  resumen: `
+  resumen: /*html*/ `
     <ul>
-      <li><b>PPN = PPB − R</b>: es el carbono fijado por fotosíntesis menos el respirado por las plantas. Se expresa en g C m⁻² año⁻¹.</li>
+      <li><b>PPN = PPB − R</b>: es el carbono fijado por fotosíntesis menos el respirado por las plantas. Unidades:( masa de C / sup . t ) </li>
       <li>A escala de la hoja, la fotosíntesis la limitan la <b>luz</b>, la <b>temperatura</b>, el <b>agua</b> (vía los estomas), el <b>CO₂</b> y el <b>N</b>.</li>
       <li>A escala global y regional, la PPN la controla sobre todo el <b>clima</b> (temperatura, precipitación y estacionalidad). A escala local, la <b>geomorfología</b> y la <b>biodiversidad</b>.</li>
       <li>La <b>temperatura</b> depende de la latitud (el ángulo de incidencia), la altitud, la continentalidad, las corrientes marinas, el albedo y los GEI.</li>
       <li>La <b>precipitación</b> depende de los centros de presión (baja en el ecuador y a 60°, alta a 30°), de la orografía, de las corrientes marinas y de fenómenos como El Niño.</li>
-    </ul>`,
+      </ul>`,
   secciones: [
     {
       id: "pro-def",
