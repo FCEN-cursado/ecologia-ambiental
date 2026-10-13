@@ -40,7 +40,7 @@
           <li><b>Hemisferio:</b> si las T más altas están en diciembre-febrero, es el hemisferio sur.</li>
           <li><b>Temperatura media anual y amplitud térmica</b> (T del mes más cálido − T del mes más frío). Una amplitud chica indica influencia oceánica o tropical; una grande, continentalidad.</li>
           <li><b>Precipitación anual total</b> (la suma de las 12 barras): &lt; 250 mm es árido, 250-500 semiárido, 500-1.000 subhúmedo y &gt; 1.000 húmedo.</li>
-          <li><b>Régimen de lluvias:</b> monzónico o estival (lluvias en verano, típico del centro-norte argentino), mediterráneo o invernal (lluvias en invierno, típico de Patagonia y Chile) o isohigro (lluvias parejas, como en la Pampa húmeda).</li>
+          <li><b>Régimen de lluvias:</b> monzónico o estival (lluvias en verano, típico del centro-norte argentino), mediterráneo o invernal (lluvias en invierno, típico de La Patagonia y Chile) o isohigro (lluvias parejas, como en la Pampa húmeda).</li>
           <li><b>Períodos secos y húmedos:</b> dónde se cruzan las curvas.</li>
           <li><b>Forma de la precipitación:</b> nieve si la T está cerca o por debajo de 0 °C.</li>
           <li><b>Vegetación esperada:</b> se integra todo lo anterior y se lo vincula con un bioma (Whittaker, Holdridge).</li>
@@ -166,14 +166,14 @@
           <li><b>Maquinchao (Río Negro):</b> 185 mm, T 9 °C y lluvias de otoño-invierno. Corresponde a la estepa patagónica.</li>
           <li><b>Catamarca:</b> 411 mm, lluvias de verano (dic-mar) y seco de abril a noviembre. Vegetación xerófila.</li>
         </ul>
-        <p>Muestran los dos regímenes de Argentina: lluvias <b>estivales</b> en el centro-norte (humedad atlántica) e <b>invernales</b> en Patagonia (humedad del Pacífico).</p>
+        <p>Muestran los dos regímenes de Argentina: lluvias <b>estivales</b> en el centro-norte (humedad atlántica) e <b>invernales</b> en la Patagonia (humedad del Pacífico).</p>
       </div>
       <h4>TP 2: discusión de artículos sobre cambio climático</h4>
       <p>Se presentó oralmente un artículo y se analizaron la pregunta o hipótesis, la metodología, los datos, las conclusiones y los aportes. Los artículos disponibles:</p>
       <div class="tabla-wrap"><table class="tabla">
         <tr><th>Artículo</th><th>Sistema y problema</th></tr>
-        <tr><td>Mundo et al. (2017), <i>Ecosphere</i></td><td>Historia de fuego en bosques de lenga (<i>Nothofagus pumilio</i>) del sur de Patagonia, reconstruida con dendrocronología (cicatrices de fuego). Separa la influencia humana (colonización) de la climática.</td></tr>
-        <tr><td>Daniels &amp; Veblen (2004), <i>Ecology</i></td><td>Límite altitudinal del bosque de lenga en el norte de Patagonia. El crecimiento radial y el establecimiento de plántulas responden de forma distinta (a veces opuesta) al clima y al ENSO. La disponibilidad de humedad domina el establecimiento, y las relaciones clima-vegetación son <b>inestables</b> en el espacio y el tiempo.</td></tr>
+        <tr><td>Mundo et al. (2017), <i>Ecosphere</i></td><td>Historia de fuego en bosques de lenga (<i>Nothofagus pumilio</i>) del sur de la Patagonia, reconstruida con dendrocronología (cicatrices de fuego). Separa la influencia humana (colonización) de la climática.</td></tr>
+        <tr><td>Daniels &amp; Veblen (2004), <i>Ecology</i></td><td>Límite altitudinal del bosque de lenga en el norte de la Patagonia. El crecimiento radial y el establecimiento de plántulas responden de forma distinta (a veces opuesta) al clima y al ENSO. La disponibilidad de humedad domina el establecimiento, y las relaciones clima-vegetación son <b>inestables</b> en el espacio y el tiempo.</td></tr>
         <tr><td>Dominguez et al. (2024), <i>Plants</i></td><td>Efectos del aumento de temperatura sobre la fenología, la fisiología y el rendimiento de vides Malbec, Bonarda y Syrah en Mendoza. Es un sistema productivo.</td></tr>
         <tr><td>López et al. (2023), <i>Environ. Health Perspect.</i></td><td>Relación entre variables climáticas (T, P) y la incidencia de dengue en Argentina: expansión del vector <i>Aedes aegypti</i> hacia el sur.</td></tr>
       </table></div>
@@ -186,7 +186,7 @@
     },
     {
       p: "Un climograma tiene 180 mm anuales, lluvias concentradas en invierno, T media de 9 °C y heladas en invierno. ¿Dónde puede estar y qué vegetación esperás?",
-      r: `<p>Por las lluvias invernales (humedad del Pacífico), la aridez y el frío, es Patagonia extraandina (como Maquinchao). Se espera una <b>estepa arbustivo-graminosa</b>: hemicriptófitas (coirones) y caméfitas o arbustos bajos en cojín, tolerantes al estrés hídrico y térmico.</p>`,
+      r: `<p>Por las lluvias invernales (humedad del Pacífico), la aridez y el frío, es La Patagonia extraandina (como Maquinchao). Se espera una <b>estepa arbustivo-graminosa</b>: hemicriptófitas (coirones) y caméfitas o arbustos bajos en cojín, tolerantes al estrés hídrico y térmico.</p>`,
     },
     {
       p: "Clasificá según Raunkiaer: yareta, algarrobo, Aristida mendocina, una anual del desierto.",

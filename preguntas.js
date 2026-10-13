@@ -90,7 +90,7 @@ window.PREGUNTAS = [
       "Es la definición de retroalimentación que se vio en Macroecología. La positiva amplifica el cambio y puede llevar a un umbral o punto de no retorno. La negativa lo amortigua y estabiliza el sistema.",
     teoria: `
       <p><strong>Ejemplo en el Amazonas (tipping point):</strong> la deforestación reduce la evapotranspiración, por lo que llega menos vapor de agua a la atmósfera. Eso disminuye las lluvias, aumenta el estrés hídrico y la mortalidad de árboles, lo que produce más pérdida de bosque. Es una <em>retroalimentación positiva</em> que puede transformar la selva en sabana.</p>
-      <p>En el caso del Amazonas visto en clase se combinan las cuatro interacciones: <em>teleconexiones</em> (clima, demanda de pasturas), <em>retroalimentaciones</em> (cobertura vegetal), <em>patrones emergentes</em> (competencia pasto-árbol) y deforestación.</p>
+      <p>En el caso del Amazonas visto en clase se combinan las cuatro interacciones: <em>teleconexiones</em> (los mercados globales generan demanda de pasturas en la región), <em>interacción entre escalas</em> (esa demanda regional se concreta como deforestación en cada campo), <em>patrones emergentes</em> (la competencia pasto-árbol de muchos sitios cambia la cobertura vegetal regional) y <em>retroalimentaciones</em> (entre la cobertura vegetal y el clima).</p>
       <p>Otras retroalimentaciones clima-vegetación: el <strong>albedo</strong> (el suelo desnudo o la nieve reflejan más radiación) y la <strong>evapotranspiración</strong> (afecta el vapor de agua y la precipitación).</p>`,
     fuente: "1 Macroecología · 3 Diversidad funcional (interacciones biogeoquímicas)",
     flash: {
@@ -254,7 +254,7 @@ window.PREGUNTAS = [
         <li><strong>Sotavento:</strong> detrás de las sierras queda la sombra de lluvia, como el valle de Santa María (árido).</li>
         <li><strong>Zonda:</strong> efecto Foehn sobre Mendoza y San Juan.</li>
       </ul>
-      <p><strong>Las lluvias en Argentina:</strong> en el norte y centro la humedad viene del Atlántico y la Amazonía, y las lluvias disminuyen de este a oeste (≈ 2.000 mm en Misiones a &lt; 200 mm en el Monte), con lluvias de verano. En Patagonia la humedad viene del Pacífico y las lluvias disminuyen de oeste a este, con lluvias de invierno. Entre ambos sistemas queda la <em>diagonal árida</em>.</p>`,
+      <p><strong>Las lluvias en Argentina:</strong> en el norte y centro la humedad viene del Atlántico y la Amazonía, y las lluvias disminuyen de este a oeste (≈ 2.000 mm en Misiones a &lt; 200 mm en el Monte), con lluvias de verano. En la Patagonia la humedad viene del Pacífico, a diferencia del norte los vientos del oeste logran llegar al lado Argentino gracias a la cordillera de menor altura y estrcruras favorables (grandes valles). Las lluvias disminuyen de oeste a este, con lluvias de invierno. Entre ambos sistemas queda la <em>diagonal árida</em>.</p>`,
     fuente: "2 Factores de productividad (controles locales)",
     flash: {
       frente: "¿Por qué hay Yungas en la ladera oriental de las sierras del NOA y zonas áridas detrás?",

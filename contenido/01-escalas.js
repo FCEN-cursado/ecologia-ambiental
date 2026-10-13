@@ -112,9 +112,10 @@
       html: `
         <h4>1. Amazonía: tipping points</h4>
         <ul>
-          <li><b>Teleconexión:</b> la demanda global de carne y soja (una teleconexión económica) impulsa la deforestación. Además, la humedad que evapotranspira la selva es transportada por los vientos hacia el sur (los “ríos voladores”) y alimenta las lluvias de la cuenca del Plata.</li>
+          <li><b>Teleconexión (global → macroescala):</b> los mercados globales de carne y soja (los <i>economic drivers</i> del esquema) se conectan con la región amazónica y generan allí una <b>demanda de pasturas</b>. Además, la humedad que evapotranspira la selva es transportada por los vientos hacia el sur (los “ríos voladores”) y alimenta las lluvias de la cuenca del Plata.</li>
+          <li><b>Interacción entre escalas (macroescala → local):</b> la demanda de pasturas, que es un proceso regional, se concreta en cada campo como <b>deforestación</b> para abrir potreros. Un proceso de escala gruesa controla lo que pasa a escala fina. Y la flecha sigue: en cada sitio deforestado se instala la <b>competencia pasto-árbol</b>.</li>
           <li><b>Retroalimentación:</b> la selva mantiene su propia lluvia por evapotranspiración y bajo albedo. Si se deforesta, hay menos vapor de agua, menos lluvia, más estrés hídrico y fuego, y más pérdida de bosque: una retroalimentación <b>positiva</b>.</li>
-          <li><b>Patrón emergente:</b> la competencia pasto-árbol y el fuego pueden llevar el sistema a un estado alternativo de sabana. Existe un <b>umbral</b> (tipping point) a partir del cual el cambio se vuelve difícil de revertir.</li>
+          <li><b>Patrón emergente (local → macroescala):</b> la competencia pasto-árbol de muchos sitios se suma y cambia la <b>cobertura vegetal</b> de toda la región. Junto con el fuego, puede llevar el sistema a un estado alternativo de sabana. Existe un <b>umbral</b> (tipping point) a partir del cual el cambio se vuelve difícil de revertir.</li>
         </ul>
         <figure class="fig"><img src="img/slides/mac_amazonas.jpg" alt="Amazonas tipping points: esquema de interacciones" loading="lazy"><figcaption>Amazonas: clima, demanda de pasturas, cobertura vegetal y deforestación interactúan entre escalas. (Clase 1)</figcaption></figure>
         <h4>2. Explosiones poblacionales de insectos (y osos en los jardines)</h4>

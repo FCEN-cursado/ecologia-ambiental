@@ -80,7 +80,7 @@
     {
       id: "pro-circulacion",
       titulo: "Circulación general de la atmósfera",
-      html: `
+      html: /*html*/`
         <p>El calentamiento desigual entre el ecuador y los polos, combinado con la rotación terrestre (fuerza de Coriolis), organiza la atmósfera en <b>tres celdas por hemisferio</b>:</p>
         <ul>
           <li><b>Celda de Hadley (0-30°):</b> en el ecuador el aire caliente y húmedo <b>asciende</b>, formando un cinturón de <b>baja presión</b> con lluvias abundantes: las selvas. A ≈ 30° el aire, ya seco, <b>desciende</b>, formando un cinturón de <b>alta presión</b> (subsidencia) con pocas lluvias: los <b>desiertos</b> (Sahara, Atacama, Kalahari, Australia). El aire vuelve hacia el ecuador como vientos <b>alisios</b>.</li>
@@ -92,7 +92,7 @@
           <p>Es la franja de bajas presiones donde convergen los alisios de ambos hemisferios. <b>Oscila</b> hacia el hemisferio que está en verano, y por eso muchas regiones tropicales tienen una estación lluviosa y otra seca. Los <b>anticiclones semipermanentes</b> del Pacífico Sur y del Atlántico Sur (≈ 30° S) también se desplazan con ella.</p>
         </div>
         <h4>Corrientes marinas y circulación termohalina</h4>
-        <p>Los vientos mueven el agua superficial y generan las corrientes marinas. Además, las diferencias de <b>temperatura y salinidad</b> (y por lo tanto de densidad) generan la <b>circulación termohalina</b>, una “cinta transportadora” global: en los polos el agua fría y salada se hunde (formación de agua profunda) y recorre los océanos. Esta circulación redistribuye el calor del planeta y afecta las temperaturas y precipitaciones locales. El derretimiento de hielo, al agregar agua dulce, podría debilitarla.</p>
+        <p>Los vientos mueven el agua superficial y generan las corrientes marinas. Además, las diferencias de <b>temperatura y salinidad</b> (y por lo tanto de densidad) generan la <b>circulación termohalina</b>, una “cinta transportadora” global: El agua que llega a los polos se congela quedando la sal en el agua que al tener mayor densidad se hunde (formación de agua profunda) y recorre los océanos. Esta circulación redistribuye el calor del planeta y afecta las temperaturas y precipitaciones locales. El derretimiento de hielo, al agregar agua dulce, podría debilitarla.</p>
         <figure class="fig chica"><img src="img/termohalina.jpg" alt="Circulación termohalina" loading="lazy"><figcaption>Circulación termohalina: corrientes superficiales (rojo) y profundas (azul). (Clase 2)</figcaption></figure>
         <h4>El Niño - Oscilación Sur (ENSO)</h4>
         <p>En condiciones normales, los alisios empujan el agua cálida del Pacífico ecuatorial hacia Oceanía, y frente a Perú aflora agua fría (surgencia, corriente de Humboldt). En un evento de <b>El Niño</b>, los alisios se debilitan, el agua cálida se desplaza hacia Sudamérica y se reorganiza la circulación atmosférica. Se monitorea con la temperatura del mar (SST) y con el índice de oscilación del sur (SOI).</p>
