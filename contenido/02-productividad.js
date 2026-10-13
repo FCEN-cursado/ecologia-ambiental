@@ -108,18 +108,18 @@
     {
       id: "pro-local",
       titulo: "Controles locales: relieve y montañas",
-      html: `
+      html: /* html */`
         <p>Las montañas modifican la temperatura y la precipitación que se esperarían a escala global, y generan <b>gradientes altitudinales</b>:</p>
         <ul>
           <li><b>Barlovento</b> (la ladera que recibe el viento húmedo): el aire asciende, se enfría y llueve. Por ejemplo, la ladera oriental del Aconquija en Tucumán, con selva de Yungas.</li>
           <li><b>Sotavento</b> (la ladera opuesta): el aire que desciende ya perdió su humedad y se calienta por compresión. Se forma una “<b>sombra de lluvia</b>”, como en el valle de Santa María (árido).</li>
-          <li><b>Viento Zonda:</b> el aire del Pacífico descarga nieve y lluvia en Chile y en la cordillera, y baja seco y caliente sobre Mendoza y San Juan (efecto Foehn).</li>
+          <li><b>Viento Zonda:</b> el aire del Pacífico descarga nieve y lluvia en Chile y en la cordillera, y baja seco y caliente sobre Mendoza y San Juan (efecto <span class="palabra-info" title=" una masa de aire cálido y húmedo se ve obligada a ascender para cruzar una montaña, transformándose en un viento fuertemente seco y muy caliente al descender"><b>foehn</b></span>).</li>
         </ul>
         <figure class="fig"><img src="img/orografica.jpg" alt="Precipitación orográfica en el Aconquija y viento Zonda" loading="lazy"><figcaption>Arriba: precipitaciones orográficas en el Aconquija (Tucumán-Catamarca). Abajo: formación del viento Zonda. (Clase 2)</figcaption></figure>
         <div class="idea"><b>¿Qué controla las precipitaciones en Argentina?</b>
           <ul>
             <li><b>En el norte y centro</b>, la humedad viene del <b>Atlántico</b> y de la Amazonía (anticiclón del Atlántico y vientos del NE). Por eso las lluvias <b>disminuyen de este a oeste</b>: de unos 2.000 mm en Misiones a menos de 200 mm en el Monte. Allí llueve en verano.</li>
-            <li><b>En Patagonia</b>, la humedad viene del <b>Pacífico</b> con los vientos del oeste. Los Andes la descargan y por eso las lluvias <b>disminuyen de oeste a este</b>: bosques andino-patagónicos y luego estepa. Allí llueve en invierno.</li>
+            <li><b>En la Patagonia</b>, la humedad viene del <b>Pacífico</b> con los vientos del oeste. En la Patagonia la humedad viene del Pacífico, a diferencia del norte los vientos del oeste logran llegar al lado Argentino gracias a la cordillera de menor altura y estrcruras favorables (grandes valles). Por eso las lluvias <b>disminuyen de oeste a este</b>: bosques andino-patagónicos y luego estepa. Allí llueve en invierno.</li>
             <li>Entre ambos sistemas queda la <b>diagonal árida</b> (Puna, Monte, Patagonia extraandina).</li>
           </ul>
         </div>`,

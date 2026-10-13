@@ -8,7 +8,7 @@
   clases: ["2 · Climograma de Walter-Lieth", "3 · Diversidad funcional (biodiversidad funcional y cambio climático)"],
   resumen: `
     <ul>
-      <li>El <b>climograma de Walter-Lieth</b> grafica la T y la P mensuales con la escala <b>20 mm = 10 °C</b> (índice de Gaussen). Cuando la curva de T supera a la de P, el período es <b>seco</b>.</li>
+      <li>El <b>climograma de Walter-Lieth</b> grafica la temperatura y la precipitación con la escala <b>20 mm = 10 °C</b> (índice de Gaussen). Cuando la curva de T supera a la de P, el período es <b>seco</b>.</li>
       <li>Los <b>atributos funcionales</b> (morfológicos, fisiológicos, fenológicos) vinculan a las plantas con las funciones y los servicios ecosistémicos.</li>
       <li><b>Raunkiaer</b> clasifica las formas de vida por la posición de las yemas. <b>Grime</b> clasifica estrategias según el estrés, el disturbio y la competencia (C-S-R).</li>
       <li><b>Holdridge</b> (biotemperatura, P, ETP/P), <b>Whittaker</b> (T y P: 9 biomas) y <b>Köppen</b> (grupos A-E) relacionan el clima con la vegetación.</li>
@@ -18,19 +18,19 @@
     {
       id: "cli-climograma",
       titulo: "El climograma de Walter-Lieth",
-      html: `
-        <p>Un <b>climograma</b> representa de forma sintética cómo varían la temperatura y la precipitación a lo largo del año en un lugar. Se construye con los valores <b>medios mensuales</b> de una estación meteorológica, a partir de las normales climáticas del SMN.</p>
+      html: /*html*/`
+        <p>Un <b>climograma</b> representa de forma sintética cómo varían la temperatura (T °C) y los milimetros de precipitación mensual (Pp mm) a lo largo del año en un lugar. Se construye con los valores <b>medios mensuales</b> de una estación meteorológica, a partir de las normales climáticas del SMN.</p>
         <ul>
           <li><b>Eje X:</b> los meses. En el hemisferio sur conviene empezar en julio, para que el verano quede en el centro, aunque en el TP se usó de enero a diciembre.</li>
           <li><b>Precipitación:</b> en barras azules (mm).</li>
           <li><b>Temperatura:</b> en puntos unidos por una línea roja (°C).</li>
-          <li><b>Condición de Walter-Lieth:</b> la escala de P es <b>siempre el doble</b> que la de T: 10 °C ocupan la misma altura que 20 mm.</li>
+          <li><b>Condición de Walter-Lieth:</b> la escala de Pp es <b>siempre el doble</b> que la de T: 10 °C ocupan la misma altura que 20 mm.</li>
         </ul>
         <div class="idea"><b>¿Por qué P = 2T? El índice de Gaussen</b>
-          <p>Gaussen propuso que un mes es <b>seco</b> cuando <b>P ≤ 2T</b> (P en mm y T en °C). Con la escala 20 mm = 10 °C, eso se ve directamente en el gráfico:</p>
+          <p>Gaussen propuso que un mes es <b>seco</b> cuando <b>Pp ≤ 2T</b> (Pp en mm y T en °C). Con la escala 20 mm = 10 °C, eso se ve directamente en el gráfico:</p>
           <ul>
-            <li>Si la <b>curva de T queda por encima de las barras de P</b>, el período es <b>seco</b>: hay déficit hídrico, porque la evapotranspiración supera a la precipitación.</li>
-            <li>Si las <b>barras de P quedan por encima de la curva de T</b>, el período es <b>húmedo</b>: la precipitación cubre la demanda evaporativa.</li>
+            <li>Si la <b>curva de T queda por encima de las barras de Pp</b>, el período es <b>seco</b>: hay déficit hídrico, porque la evapotranspiración supera a la precipitación.</li>
+            <li>Si las <b>barras de Pp quedan por encima de la curva de T</b>, el período es <b>húmedo</b>: la precipitación cubre la demanda evaporativa.</li>
             <li>Si la T media es &lt; 0 °C, hay heladas y la precipitación probablemente sea nieve.</li>
           </ul>
         </div>
@@ -48,7 +48,7 @@
         <div class="ejemplo"><b>Ejercicio: unir climogramas con localidades</b>
           <p>Un ejercicio típico es unir tres climogramas con <b>San Rafael</b> (Mendoza), <b>General Pico</b> (La Pampa) y <b>Dolores</b> (Buenos Aires), que forman un transecto oeste-este a ≈ 35-36° S, y justificar el bioma esperado. El razonamiento:</p>
           <ul>
-            <li>Como en el centro de Argentina la humedad viene del Atlántico, la <b>P aumenta hacia el este</b> y la <b>amplitud térmica disminuye</b> cerca del mar.</li>
+            <li>Como en el centro de Argentina la humedad viene del Atlántico, la <b>Pp aumenta hacia el este</b> y la <b>amplitud térmica disminuye</b> cerca del mar.</li>
             <li><b>San Rafael:</b> el climograma más seco, con ≈ 300-400 mm, lluvias de verano y casi todo el año con T por encima de P. Corresponde a un <b>desierto o arbustal templado</b>, el Monte con jarillas.</li>
             <li><b>General Pico:</b> intermedio, con ≈ 700-800 mm, lluvias concentradas en primavera-verano y un déficit corto. Corresponde a la transición entre pastizal y bosque abierto (Espinal o caldenal, y pampa semiárida).</li>
             <li><b>Dolores:</b> el más húmedo, con ≈ 900-1.000 mm repartidos todo el año y baja amplitud. Corresponde a un <b>pastizal templado o pradera</b>, la Pampa húmeda.</li>
@@ -58,8 +58,8 @@
     },
     {
       id: "cli-funcional",
-      titulo: "Diversidad funcional: servicios, funciones y atributos",
-      html: `
+      titulo: "Ecosistemas: Diversidad funcional",
+      html: /*html*/ `
         <p>La diversidad funcional sirve para entender y simular cómo funciona nuestro planeta en un contexto de cambio climático. Se organiza en tres niveles:</p>
         <div class="cols">
           <div class="col"><h5>Servicios ecosistémicos</h5><p>Son los beneficios que los ecosistemas brindan a las personas:</p>
@@ -69,7 +69,16 @@
           <div class="col"><h5>Atributos funcionales</h5><p>Son rasgos medibles de los organismos que afectan su respuesta al ambiente o su efecto sobre el ecosistema (hay una base de datos global, TRY):</p>
             <ul><li><b>Morfológicos:</b> tamaño de hoja, raíces</li><li><b>Anatómicos:</b> leño, xilema</li><li><b>Bioquímicos:</b> pigmentos, enzimas</li><li><b>Fisiológicos:</b> fotosíntesis C3, C4, CAM</li><li><b>Fenológicos:</b> deciduo o perenne</li></ul></div>
         </div>
-        <p>Ejemplos de clase de organismos que brindan servicios: la ranita del Pehuenche, las costras biológicas del suelo, las aves rapaces (aguiluchos, caranchos, chimangos), el pachango (<i>Prosopanche</i>) y el algarrobo.</p>
+        <div class="ejemplo"><b>Ejemplos de clase: organismos que brindan servicios</b>
+          <div class="tabla-wrap"><table class="tabla">
+            <tr><th>Organismo</th><th>Servicios</th><th>Por qué</th></tr>
+            <tr><td><b>Ranita del Pehuenche</b> (<i>Alsodes pehuenche</i>)</td><td>Cultural · regulación</td><td>Es endémica de los arroyos y vegas del paso Pehuenche (Malargüe) y está en peligro crítico. Funciona como especie emblemática para la conservación (valor de existencia e identidad) y, como todo anfibio de piel permeable, es <b>bioindicadora</b> de la calidad del agua. Además consume invertebrados.</td></tr>
+            <tr><td><b>Costras biológicas del suelo</b></td><td>Soporte · regulación</td><td>Las cianobacterias, musgos y líquenes <b>fijan N</b> y aportan materia orgánica (formación de suelo). Sus exopolisacáridos <b>estabilizan el suelo</b>, lo que reduce la erosión y el polvo y mejora la infiltración. Ver la unidad de restauración.</td></tr>
+            <tr><td><b>Aves rapaces</b> (aguiluchos, caranchos, chimangos)</td><td>Regulación · soporte</td><td>Los aguiluchos <b>controlan roedores e insectos</b> que pueden ser plagas de cultivos. Caranchos y chimangos además son <b>carroñeros</b>: eliminan cadáveres, lo que ayuda al control de enfermedades y al ciclado de nutrientes.</td></tr>
+            <tr><td><b>Pachango</b> (<i>Prosopanche</i>)</td><td>Aprovisionamiento · cultural</td><td>Es una planta <b>holoparásita</b> que vive bajo tierra sobre las raíces del algarrobo y solo asoma la flor (una geófita, según Raunkiaer). Sus frutos son <b>comestibles</b> y fueron alimento de pueblos originarios y de la fauna. Es un ejemplo de que hasta especies poco visibles brindan servicios.</td></tr>
+            <tr><td><b>Algarrobo</b> (<i>Neltuma</i>)</td><td>Todos los tipos</td><td><b>Aprovisionamiento:</b> vainas para harina y forraje, leña y madera. <b>Regulación:</b> almacena carbono (TP 6, Telteca) y da sombra. <b>Soporte:</b> como leguminosa fija N y funciona como <b>planta nodriza</b>, ya que bajo su copa crecen pastos (facilitación, unidad 2). <b>Cultural:</b> tiene valor identitario para las comunidades del Monte.</td></tr>
+          </table></div>
+        </div>
         <div class="idea"><b>Tipos funcionales de plantas (Díaz et al., 2002)</b>
           <p>Son grupos de especies que comparten atributos y responden de manera parecida al ambiente o tienen efectos parecidos sobre el ecosistema, sin importar su parentesco. El enfoque es <b>flexible</b>: los tipos se definen según la escala y la pregunta, y es <b>complementario</b>, no opuesto, a las clasificaciones taxonómica y filogenética. Antecedentes: Teofrasto (árboles, arbustos, hierbas), Raunkiaer y Grime.</p>
         </div>
@@ -144,7 +153,7 @@
     titulo: "TP 1 · Turismo con climogramas · TP 2 · Cambio climático en artículos",
     html: `
       <h4>TP 1: qué se hizo</h4>
-      <p>Cada estudiante eligió una localidad, descargó las <b>Estadísticas Climáticas Normales</b> del SMN, construyó en Excel un climograma de Walter-Lieth (barras azules de P, línea roja de T, escala 10 °C = 20 mm) y respondió estas preguntas:</p>
+      <p>Cada estudiante eligió una localidad, descargó las <b>Estadísticas Climáticas Normales</b> del SMN, construyó en Excel un climograma de Walter-Lieth (barras azules de Pp, línea roja de T, escala 10 °C = 20 mm) y respondió estas preguntas:</p>
       <ol>
         <li>Localidad y provincia.</li>
         <li>¿Tiene invierno y verano muy marcados? (se ve en la amplitud térmica)</li>
