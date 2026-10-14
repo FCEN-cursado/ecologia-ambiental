@@ -52,6 +52,7 @@
               <li>Los valores pueden ser 0/1 (ausencia o presencia), categorías (A, B, C) o continuos (por ejemplo, de −1 a 1).</li>
               <li>Las posiciones se expresan en coordenadas de imagen (i, j) = (número de píxel, número de línea).</li>
               <li>Estructura <b>simple</b>, pero con <b>gran volumen de datos</b>. La superposición es precisa y es <b>directamente compatible con imágenes satelitales</b>.</li>
+              <li><b>Usos:</b> variables <b>continuas</b> que cambian gradualmente en el espacio, como elevación (modelo digital de elevación), pendiente, temperatura, precipitación, índices de vegetación (NDVI), imágenes satelitales y mapas de cobertura del suelo derivados de ellas.</li>
             </ul></div>
           <div class="col"><h5>Vectorial</h5>
             <ul>
@@ -60,18 +61,26 @@
               <li><b>Menor volumen</b> de datos y expresión <b>precisa y realista</b> de las formas.</li>
               <li><b>Topología completa</b>, que permite el análisis espacial.</li>
               <li>Organiza los atributos en <b>bases de datos relacionales</b> (operaciones y consultas).</li>
+              <li>Pero tiene una estructura de datos <b>más compleja</b>, y representa mal los fenómenos <b>continuos o graduales</b> (un gradiente de temperatura no tiene bordes).</li>
+              <li>La <b>superposición</b> de capas es más costosa de calcular y puede generar polígonos espurios (<i>sliver polygons</i>). Además, <b>no es compatible directamente con imágenes satelitales</b>: hay que digitalizarlas o poligonizarlas.</li>
+              <li><b>Usos:</b> entidades <b>discretas</b> con límites definidos, como límites de ANP, provincias o parcelas (polígonos), ríos, rutas y redes (líneas), y puntos de muestreo, puestos o pozos (puntos).</li>
             </ul></div>
         </div>
         <div class="idea"><b>Ambos modelos son interconvertibles</b>
           <p><b>Poligonizar</b> (raster → vector): las celdas se transforman en polígonos. <b>Rasterizar</b> (vector → raster): los puntos, líneas o polígonos se expresan en una grilla. Al rasterizar se <b>pierde precisión</b>, porque los límites quedan “escalonados” según el tamaño del píxel: cuanto más chico el píxel, más fiel el límite, pero más pesado el archivo.</p>
         </div>
         <figure class="fig chica"><img src="img/slides/sig_conversion.jpg" alt="Conversión entre formatos" loading="lazy"><figcaption>Conversión raster → vectorial y vectorial → raster. (Clase 4)</figcaption></figure>
-        <p>Un SIG permite <b>superponer capas</b>, y la superposición permite caracterizar un área de estudio. Cada capa tiene un solo modelo de representación, y cada capa vectorial un solo tipo de entidad.</p>`,
+        <p>Un SIG permite <b>superponer capas</b>, y la superposición permite caracterizar un área de estudio. Cada capa tiene un solo modelo de representación, y cada capa vectorial un solo tipo de entidad.</p>
+        <div class="tabla-wrap"><table class="tabla">
+          <tr><th></th><th>Vectorial</th><th>Raster</th></tr>
+          <tr><td>Restricción por capa</td><td>Un <b>tipo de entidad</b> (punto, línea o polígono)</td><td>Un <b>valor del atributo por píxel</b> (una variable por banda)</td></tr>
+          <tr><td>¿Puede mezclar ríos, pozos y áreas?</td><td>No, van en capas distintas</td><td>Sí, todos son píxeles con distinto valor</td></tr>
+        </table></div>`,
     },
     {
       id: "sig-coordenadas",
       titulo: "Sistemas de referencia y de proyección",
-      html: `
+      html: /*html*/`
         <div class="cols">
           <div class="col"><h5>Sistema de referencia</h5><p>Ubica la posición de un punto <b>en la Tierra</b>. Esa posición se describe con <b>coordenadas geográficas</b> (latitud, longitud).</p></div>
           <div class="col"><h5>Sistema de proyección</h5><p>Ubica la posición de un punto <b>en un mapa</b> (plano). Esa posición se describe con <b>coordenadas planas</b> (x, y), por lo general en metros.</p></div>
@@ -82,7 +91,7 @@
           <li>Se usan líneas imaginarias: <b>paralelos</b> y <b>meridianos</b>.</li>
           <li><b>Latitud:</b> distancia angular (°) desde el plano del Ecuador, N o S (0-90°).</li>
           <li><b>Longitud:</b> distancia angular desde el plano del meridiano de Greenwich, E u O (0-180°).</li>
-          <li><b>Global vs. local:</b> WGS84 (World Geodetic System, el que usa el GPS) es global. Argentina usa un marco local, <b>POSGAR</b>, que en la práctica coincide con WGS84 con diferencias de centímetros.</li>
+          <li><b>Global vs. local:</b> WGS84 (World Geodetic System, el que usa el GPS) es global. Argentina usa un marco de referencia nacional, <b>POSGAR</b>, que en la práctica coincide con WGS84 con diferencias de centímetros.</li>
         </ul>
         <figure class="fig chica"><img src="img/slides/sig_coordenadas.jpg" alt="Coordenadas geográficas" loading="lazy"><figcaption>Elipsoide, datum, latitud y longitud. (Clase 4)</figcaption></figure>
         <h4>Proyecciones: pasar al plano</h4>
@@ -97,6 +106,23 @@
           <p>Es <b>cilíndrica transversal</b> (el cilindro toca la Tierra a lo largo de un meridiano). Divide el país en <b>7 fajas</b> de 3° de ancho, cada una con su <b>meridiano central</b>: faja 1 = 72° O, faja 2 = 69° O, faja 3 = 66° O, etc. Las coordenadas son planas, en <b>metros</b>. Mendoza cae en la <b>faja 2</b>.</p>
         </div>
         <figure class="fig chica"><img src="img/slides/sig_gauss.jpg" alt="Proyección Gauss Krüger" loading="lazy"><figcaption>Las 7 fajas Gauss-Krüger de Argentina. (Clase 4)</figcaption></figure>
+        <h4>Datum, POSGAR y Gauss-Krüger: dos pasos independientes</h4>
+        <p>Primero se define <b>qué Tierra</b> se usa (el datum) y después <b>cómo se aplana</b> (la proyección). POSGAR pertenece al primer paso y Gauss-Krüger al segundo.</p>
+        <p><b><u> Paso 1: </u> el datum da latitud y longitud.</b> Hay que decidir qué elipsoide usar y cómo se ubica respecto de la Tierra real. Según el datum, el mismo punto físico tiene lat/long algo distintas.</p>
+        <div class="tabla-wrap"><table class="tabla">
+          <tr><th></th><th>Campo Inchauspe (datum local, viejo)</th><th>POSGAR (actual, oficial)</th></tr>
+          <tr><td>Elipsoide</td><td>Internacional 1924</td><td>WGS84 (POSGAR 94) / GRS80 (POSGAR 07)</td></tr>
+          <tr><td>Anclaje</td><td>Un punto en la superficie: Campo Inchauspe, provincia de Buenos Aires</td><td>Al centro de masa de la Tierra (geocéntrico), medido con GPS</td></tr>
+          <tr><td>Alcance</td><td>Se ajusta bien a Argentina, no sirve fuera</td><td>Compatible con el sistema global</td></tr>
+          <tr><td>Diferencia con WGS84</td><td>~100 a 200 m</td><td>Centímetros</td></tr>
+        </table></div>
+        <p>Un <b>datum local</b> se ancla en un punto del propio territorio y se ajusta lo mejor posible a esa región, aunque se aleje del resto del mundo. <b>POSGAR</b> (Posiciones Geodésicas Argentinas) lo reemplazó con la llegada del GPS: es una red de puntos medidos en el país que materializa un sistema geocéntrico, en la práctica igual a WGS84. Por eso es más preciso llamarlo <b>marco de referencia nacional</b> que datum local.</p>
+        <p><b><u> Paso 2: </u> la proyección da (x, y) en metros.</b> Gauss-Krüger <b>no define la Tierra</b>: toma la lat/long que da un datum y la pasa al plano, por fajas. Puede aplicarse sobre cualquier datum, tanto sobre Campo Inchauspe (cartografía vieja) como sobre POSGAR (sistema oficial actual).</p>
+        <p>Un sistema de coordenadas proyectado es <b>datum + proyección (+ faja)</b>, y cada combinación tiene su código EPSG. Para la faja 2 (Mendoza):</p>
+ 
+        <div class="idea"><b>Analogía</b>
+          <p>El datum es decidir <b>qué globo terráqueo</b> usás y cómo lo apoyás sobre la Tierra real. La proyección es <b>cómo pelás ese globo</b> para dejarlo plano. Gauss-Krüger es una forma de pelar el globo, y puede aplicarse sobre el globo viejo (Campo Inchauspe) o sobre el nuevo (POSGAR).</p>
+        </div>
         <div class="ojo"><b>¿Por qué proyectar antes de calcular áreas?</b>
           <p>En coordenadas geográficas las unidades son <b>grados</b>, y un grado de longitud no mide lo mismo en el ecuador que en Ushuaia. Para calcular perímetros (m) y superficies (m²) hay que reproyectar a un sistema plano. En el TP 3 se usó <code>EPSG:22192</code> (Argentina faja 2).</p>
         </div>`,

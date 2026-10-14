@@ -40,7 +40,7 @@
     {
       id: "tel-espectro",
       titulo: "Principios físicos y espectro electromagnético",
-      html: `
+      html: /*html*/ `
         <p>La energía que viene del sol puede ser <b>reflejada</b>, <b>absorbida</b> (y luego <b>emitida</b> como calor) o <b>transmitida</b>. Cómo se reparte depende del material y de la longitud de onda.</p>
         <div class="tabla-wrap"><table class="tabla">
           <tr><th>Región</th><th>Longitud de onda</th><th>Qué informa</th></tr>
@@ -52,8 +52,8 @@
         </table></div>
         <h4>Dos términos clave</h4>
         <ul>
-          <li><b>Radiancia:</b> energía radiada en una dirección por unidad de área. Es <b>lo que mide el sensor</b>.</li>
-          <li><b>Reflectividad (reflectancia):</b> relación (%) entre el flujo reflejado y el flujo incidente. Depende de la composición del material y varía a lo largo del espectro.</li>
+          <li><b><u> Radiancia </u></b>: energía radiada en una dirección por unidad de área. Es <b>lo que mide el sensor</b> variable segun las condiciones (atmosfericas, altitud, etc.).</li>
+          <li><b><u>Reflectividad </u></b> (reflectancia): relación (%) entre el flujo reflejado y el flujo incidente. Es una propiedad espectral del objeto (depende del tipo de material)</li>
         </ul>`,
     },
     {

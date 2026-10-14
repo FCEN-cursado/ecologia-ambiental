@@ -19,18 +19,18 @@
       id: "cli-climograma",
       titulo: "El climograma de Walter-Lieth",
       html: /*html*/`
-        <p>Un <b>climograma</b> representa de forma sintética cómo varían la temperatura (T °C) y los milimetros de precipitación mensual (Pp mm) a lo largo del año en un lugar. Se construye con los valores <b>medios mensuales</b> de una estación meteorológica, a partir de las normales climáticas del SMN.</p>
+        <p>Un <b>climograma</b> representa de forma sintética cómo varían la temperatura (T °C) y los milimetros de precipitación mensual (P mm) a lo largo del año en un lugar. Se construye con los valores <b>medios mensuales</b> de una estación meteorológica, a partir de las normales climáticas del SMN.</p>
         <ul>
           <li><b>Eje X:</b> los meses. En el hemisferio sur conviene empezar en julio, para que el verano quede en el centro, aunque en el TP se usó de enero a diciembre.</li>
           <li><b>Precipitación:</b> en barras azules (mm).</li>
           <li><b>Temperatura:</b> en puntos unidos por una línea roja (°C).</li>
-          <li><b>Condición de Walter-Lieth:</b> la escala de Pp es <b>siempre el doble</b> que la de T: 10 °C ocupan la misma altura que 20 mm.</li>
+          <li><b>Condición de Walter-Lieth:</b> la escala de P es <b>siempre el doble</b> que la de T: 10 °C ocupan la misma altura que 20 mm.</li>
         </ul>
         <div class="idea"><b>¿Por qué P = 2T? El índice de Gaussen</b>
-          <p>Gaussen propuso que un mes es <b>seco</b> cuando <b>Pp ≤ 2T</b> (Pp en mm y T en °C). Con la escala 20 mm = 10 °C, eso se ve directamente en el gráfico:</p>
+          <p>Gaussen propuso que un mes es <b>seco</b> cuando <b>P ≤ 2T</b> (P en mm y T en °C). Con la escala 20 mm = 10 °C, eso se ve directamente en el gráfico:</p>
           <ul>
-            <li>Si la <b>curva de T queda por encima de las barras de Pp</b>, el período es <b>seco</b>: hay déficit hídrico, porque la evapotranspiración supera a la precipitación.</li>
-            <li>Si las <b>barras de Pp quedan por encima de la curva de T</b>, el período es <b>húmedo</b>: la precipitación cubre la demanda evaporativa.</li>
+            <li>Si la <b>curva de T queda por encima de las barras de P</b>, el período es <b>seco</b>: hay déficit hídrico, porque la evapotranspiración supera a la precipitación.</li>
+            <li>Si las <b>barras de P quedan por encima de la curva de T</b>, el período es <b>húmedo</b>: la precipitación cubre la evapotranspiración.</li>
             <li>Si la T media es &lt; 0 °C, hay heladas y la precipitación probablemente sea nieve.</li>
           </ul>
         </div>
@@ -48,7 +48,7 @@
         <div class="ejemplo"><b>Ejercicio: unir climogramas con localidades</b>
           <p>Un ejercicio típico es unir tres climogramas con <b>San Rafael</b> (Mendoza), <b>General Pico</b> (La Pampa) y <b>Dolores</b> (Buenos Aires), que forman un transecto oeste-este a ≈ 35-36° S, y justificar el bioma esperado. El razonamiento:</p>
           <ul>
-            <li>Como en el centro de Argentina la humedad viene del Atlántico, la <b>Pp aumenta hacia el este</b> y la <b>amplitud térmica disminuye</b> cerca del mar.</li>
+            <li>Como en el centro de Argentina la humedad viene del Atlántico, la <b>P aumenta hacia el este</b> y la <b>amplitud térmica disminuye</b> cerca del mar.</li>
             <li><b>San Rafael:</b> el climograma más seco, con ≈ 300-400 mm, lluvias de verano y casi todo el año con T por encima de P. Corresponde a un <b>desierto o arbustal templado</b>, el Monte con jarillas.</li>
             <li><b>General Pico:</b> intermedio, con ≈ 700-800 mm, lluvias concentradas en primavera-verano y un déficit corto. Corresponde a la transición entre pastizal y bosque abierto (Espinal o caldenal, y pampa semiárida).</li>
             <li><b>Dolores:</b> el más húmedo, con ≈ 900-1.000 mm repartidos todo el año y baja amplitud. Corresponde a un <b>pastizal templado o pradera</b>, la Pampa húmeda.</li>
@@ -112,8 +112,8 @@
     },
     {
       id: "cli-clasificaciones",
-      titulo: "Clasificaciones clima-vegetación: Holdridge, Whittaker, Köppen",
-      html: `
+      titulo: "Clasificaciones clima-vegetación: Holdridge, Whittaker, KöPen",
+      html: /*html*/ ` 
         <div class="tabla-wrap"><table class="tabla">
           <tr><th>Sistema</th><th>Variables</th><th>Resultado</th><th>Limitaciones</th></tr>
           <tr><td><b>Holdridge</b> (1947)</td><td>Biotemperatura (T media útil, entre 0 y 30 °C), precipitación anual y humedad (ETP/P)</td><td>Zonas de vida en un diagrama triangular de hexágonos, con regiones latitudinales y pisos altitudinales</td><td>Predice mal las sabanas, porque no considera la estacionalidad ni el fuego</td></tr>
@@ -122,7 +122,7 @@
         </table></div>
         <div class="figs">
           <figure class="fig"><img src="img/slides/cli_holdridge.jpg" alt="Zonas de vida de Holdridge" loading="lazy"><figcaption>Zonas de vida de Holdridge. Existe un mapa para Argentina (Derguy et al., 2019).</figcaption></figure>
-          <figure class="fig"><img src="img/slides/cli_whittaker.jpg" alt="Biomas de Whittaker" loading="lazy"><figcaption>Diagrama de Whittaker: biomas según la T y la P medias anuales.</figcaption></figure>
+          <figure class="fig"><img src="img/slides/cli_whittaker.png" alt="Biomas de Whittaker" loading="lazy"><figcaption>Diagrama de Whittaker: biomas según la T y la Pp medias anuales.</figcaption></figure>
           <figure class="fig"><img src="img/slides/cli_koppen.jpg" alt="Mapa de Köppen-Geiger" loading="lazy"><figcaption>Mapa climático de Köppen-Geiger.</figcaption></figure>
         </div>
         <div class="ejemplo"><b>Köppen y el cambio climático (Beck et al., 2023)</b>
@@ -153,7 +153,7 @@
     titulo: "TP 1 · Turismo con climogramas · TP 2 · Cambio climático en artículos",
     html: `
       <h4>TP 1: qué se hizo</h4>
-      <p>Cada estudiante eligió una localidad, descargó las <b>Estadísticas Climáticas Normales</b> del SMN, construyó en Excel un climograma de Walter-Lieth (barras azules de Pp, línea roja de T, escala 10 °C = 20 mm) y respondió estas preguntas:</p>
+      <p>Cada estudiante eligió una localidad, descargó las <b>Estadísticas Climáticas Normales</b> del SMN, construyó en Excel un climograma de Walter-Lieth (barras azules de P, línea roja de T, escala 10 °C = 20 mm) y respondió estas preguntas:</p>
       <ol>
         <li>Localidad y provincia.</li>
         <li>¿Tiene invierno y verano muy marcados? (se ve en la amplitud térmica)</li>
@@ -191,7 +191,7 @@
   practica: [
     {
       p: "En un climograma de Walter-Lieth, ¿cómo se identifica un período seco y por qué?",
-      r: `<p>Cuando la curva de temperatura queda por encima de las barras de precipitación. Como la escala es 20 mm = 10 °C, eso equivale a P ≤ 2T (índice de Gaussen): la demanda evaporativa supera el aporte de lluvia y hay déficit hídrico para la vegetación.</p>`,
+      r: `<p>Cuando la curva de temperatura queda por encima de las barras de precipitación. Como la escala es 20 mm = 10 °C, eso equivale a P ≤ 2T (índice de Gaussen): la evapotranspiración supera el aporte de lluvia y hay déficit hídrico para la vegetación.</p>`,
     },
     {
       p: "Un climograma tiene 180 mm anuales, lluvias concentradas en invierno, T media de 9 °C y heladas en invierno. ¿Dónde puede estar y qué vegetación esperás?",

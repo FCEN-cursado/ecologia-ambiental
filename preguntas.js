@@ -303,7 +303,7 @@ window.PREGUNTAS = [
       <p><strong>Climograma de Walter-Lieth:</strong></p>
       <ul>
         <li>Eje Y izquierdo: precipitación (mm). Eje Y derecho: temperatura (°C). Eje X: meses.</li>
-        <li><strong>Escala relativa: 20 mm de precipitación = 10 °C</strong> (P = 2T). Así, el cruce de las curvas aproxima cuándo la demanda evaporativa supera al aporte de agua.</li>
+        <li><strong>Escala relativa: 20 mm de precipitación = 10 °C</strong> (P = 2T). Así, el cruce de las curvas aproxima cuándo la evapotranspiración supera al aporte de agua.</li>
         <li><strong>Período húmedo:</strong> la curva de P está por encima de la de T.</li>
         <li><strong>Período seco (aridez):</strong> la curva de T está por encima de la de P.</li>
         <li>Los meses con T &lt; 0 °C pueden marcarse en azul (heladas o nevadas).</li>
